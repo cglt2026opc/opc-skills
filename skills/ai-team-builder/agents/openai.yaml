@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 虚拟团队搭建"
+  short_description: "按业务流程、预算与风险配置一人公司的人工智能角色和协作组合"
+  default_prompt: "Use $ai-team-builder to design a lean AI virtual team for my OPC workflow."

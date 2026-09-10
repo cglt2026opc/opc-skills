@@ -1,0 +1,4 @@
+interface:
+  display_name: "在职副业安全启动"
+  short_description: "在主业合规边界内验证市场需求、交付能力和第一笔真实收入"
+  default_prompt: "Use $side-income-launcher to design a low-risk first paid experiment alongside my job."

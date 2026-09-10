@@ -1,0 +1,4 @@
+interface:
+  display_name: "OPC 案例探索"
+  short_description: "从全书实战案例中匹配真实情境并提炼可迁移的行动原则"
+  default_prompt: "Use $case-explorer to match my situation with relevant OPC cases and lessons."

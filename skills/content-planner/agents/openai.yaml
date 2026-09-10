@@ -1,0 +1,4 @@
+interface:
+  display_name: "一人公司内容规划"
+  short_description: "围绕业务定位、客户旅程和转化目标规划多平台专业内容矩阵"
+  default_prompt: "Use $content-planner to create a conversion-aware content plan for my OPC."

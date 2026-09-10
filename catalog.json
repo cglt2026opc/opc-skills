@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "name": "ai-super-individual-opc-skills",
+  "display_name": "《AI超级个体》一人公司（OPC）实战 Skills",
+  "version": "0.1.0",
+  "language": "zh-CN",
+  "book": {
+    "title": "AI超级个体：一人公司（OPC）创富手册",
+    "author": "菜根老谭",
+    "publisher": "机械工业出版社",
+    "isbn": "978-7-111-81776-5"
+  },
+  "skills": [
+    {"name": "career-diagnostic", "title": "AI时代职业诊断", "stage": "觉醒与诊断", "path": "skills/career-diagnostic"},
+    {"name": "super-individual-assessment", "title": "超级个体能力自测", "stage": "觉醒与诊断", "path": "skills/super-individual-assessment"},
+    {"name": "dreyfus-ai-assessor", "title": "德雷福斯模型 × AI 评估", "stage": "觉醒与诊断", "path": "skills/dreyfus-ai-assessor"},
+    {"name": "case-explorer", "title": "案例智能匹配分析", "stage": "觉醒与诊断", "path": "skills/case-explorer"},
+    {"name": "ability-upgrade", "title": "能力结构升级与产品思维训练", "stage": "能力与定位", "path": "skills/ability-upgrade"},
+    {"name": "capability-productizer", "title": "能力产品化自检", "stage": "能力与定位", "path": "skills/capability-productizer"},
+    {"name": "opc-positioner", "title": "OPC 精准定位分析", "stage": "能力与定位", "path": "skills/opc-positioner"},
+    {"name": "personal-brand-builder", "title": "超级个体人设与个人品牌", "stage": "能力与定位", "path": "skills/personal-brand-builder"},
+    {"name": "opc-modeler", "title": "OPC 商业模式画布", "stage": "产品与商业验证", "path": "skills/opc-modeler"},
+    {"name": "kano-prioritizer", "title": "KANO 需求优先级", "stage": "产品与商业验证", "path": "skills/kano-prioritizer"},
+    {"name": "mvp-validator", "title": "MVP 产品可行性验证", "stage": "产品与商业验证", "path": "skills/mvp-validator"},
+    {"name": "value-pricer", "title": "价值定价分析", "stage": "产品与商业验证", "path": "skills/value-pricer"},
+    {"name": "opc-startup-readiness", "title": "一人公司创业准备评估", "stage": "产品与商业验证", "path": "skills/opc-startup-readiness"},
+    {"name": "side-income-launcher", "title": "在职副业安全启动", "stage": "产品与商业验证", "path": "skills/side-income-launcher"},
+    {"name": "content-planner", "title": "内容矩阵规划", "stage": "获客、交付与运营", "path": "skills/content-planner"},
+    {"name": "sop-generator", "title": "标准操作程序生成", "stage": "获客、交付与运营", "path": "skills/sop-generator"},
+    {"name": "ai-team-builder", "title": "AI 虚拟团队搭建", "stage": "获客、交付与运营", "path": "skills/ai-team-builder"},
+    {"name": "opc-prompt-workbench", "title": "OPC 提示词工作台", "stage": "获客、交付与运营", "path": "skills/opc-prompt-workbench"},
+    {"name": "resource-explorer", "title": "OPC 资源导航", "stage": "获客、交付与运营", "path": "skills/resource-explorer"},
+    {"name": "super-individual-90day", "title": "超级个体 90 天行动计划", "stage": "行动与增长", "path": "skills/super-individual-90day"},
+    {"name": "growth-tracker", "title": "年度增长计划", "stage": "行动与增长", "path": "skills/growth-tracker"}
+  ]
+}

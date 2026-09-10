@@ -1,0 +1,4 @@
+interface:
+  display_name: "德雷福斯 AI 能力评估"
+  short_description: "定位技能成长阶段、人工智能替代风险并规划下一步升维路径"
+  default_prompt: "Use $dreyfus-ai-assessor to assess my current skill stage and AI-era upgrade path."

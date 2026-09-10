@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 职业风险诊断"
+  short_description: "分析岗位任务的人工智能替代风险并制定证据充分的转型路径"
+  default_prompt: "Use $career-diagnostic to assess my job tasks and create an AI-era transition plan."

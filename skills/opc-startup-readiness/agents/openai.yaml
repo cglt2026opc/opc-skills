@@ -1,0 +1,4 @@
+interface:
+  display_name: "一人公司创业准备评估"
+  short_description: "通过十二项检查、风险门槛和里程碑判断一人公司启动时机"
+  default_prompt: "Use $opc-startup-readiness to assess whether I am ready to start an OPC safely."

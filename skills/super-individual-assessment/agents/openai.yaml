@@ -1,0 +1,4 @@
+interface:
+  display_name: "超级个体能力自测"
+  short_description: "基于四维能力量化评分、证据校验并生成九十天行动建议"
+  default_prompt: "Use $super-individual-assessment to assess my four OPC capability pillars and create an evidence-based action plan."

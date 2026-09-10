@@ -1,0 +1,4 @@
+interface:
+  display_name: "一人公司年度增长"
+  short_description: "规划收入结构、获客渠道、合作杠杆并持续完成季度增长复盘"
+  default_prompt: "Use $growth-tracker to build and review my annual OPC growth plan."

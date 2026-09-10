@@ -1,0 +1,4 @@
+interface:
+  display_name: "KANO 需求优先级"
+  short_description: "分类候选需求并按底线、增益、惊喜生成可解释决策顺序"
+  default_prompt: "Use $kano-prioritizer to classify and prioritize my product requirements."

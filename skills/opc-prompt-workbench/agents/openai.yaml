@@ -1,0 +1,4 @@
+interface:
+  display_name: "OPC 提示词工作台"
+  short_description: "按真实业务场景选择、定制并质量校验十六类高频提示词"
+  default_prompt: "Use $opc-prompt-workbench to select and customize the right prompt for my OPC task."

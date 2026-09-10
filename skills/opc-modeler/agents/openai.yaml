@@ -1,0 +1,4 @@
+interface:
+  display_name: "一人公司商业模式画布"
+  short_description: "完成九格商业模式画布并识别资源、渠道、收入和成本盲点"
+  default_prompt: "Use $opc-modeler to build and stress-test my personal business model canvas."

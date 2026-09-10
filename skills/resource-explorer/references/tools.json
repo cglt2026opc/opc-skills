@@ -1,0 +1,91 @@
+{
+  "source_note": "工具名称仅作候选示例。功能、价格、地区可用性与条款必须在推荐时从官网核对。",
+  "stages": [
+    {
+      "id": "awakening",
+      "name": "觉醒",
+      "goal": "建立 AI 使用习惯并识别个人价值",
+      "needed_functions": ["通用对话", "AI搜索", "知识整理"],
+      "selection_rule": "先选一个通用助手和一个可靠信息检索入口"
+    },
+    {
+      "id": "building",
+      "name": "蓄力",
+      "goal": "训练产品思维并跑通真实项目",
+      "needed_functions": ["文档分析", "原型与流程", "项目管理", "代码辅助"],
+      "selection_rule": "围绕正在做的真实项目补工具，不为收藏而学习"
+    },
+    {
+      "id": "empowering",
+      "name": "赋能",
+      "goal": "把组织内验证过的能力转为可交付价值",
+      "needed_functions": ["内容生产", "演示与报价", "客户记录", "交付模板"],
+      "selection_rule": "优先选择能留下案例、模板和流程资产的工具"
+    },
+    {
+      "id": "establishing",
+      "name": "建立",
+      "goal": "跑通定位、MVP、首单和日常运营",
+      "needed_functions": ["商业画布", "客户管理", "收付款", "任务与SOP"],
+      "selection_rule": "先跑通真实客户、交付和回款，再购买重型系统"
+    },
+    {
+      "id": "operating",
+      "name": "运营",
+      "goal": "稳定获客、成交与可复制交付",
+      "needed_functions": ["内容分发", "私域运营", "数据分析", "交付自动化"],
+      "selection_rule": "工具必须对应漏斗或交付中的具体瓶颈"
+    },
+    {
+      "id": "growing",
+      "name": "增长",
+      "goal": "提高客单价、优化收入结构并借力合作",
+      "needed_functions": ["经营分析", "合作管理", "客户分层", "知识资产"],
+      "selection_rule": "优先支持主航道增长，不为新增业务线堆工具"
+    },
+    {
+      "id": "breaking-through",
+      "name": "突破",
+      "goal": "把本人升级为指挥系统并控制规模化风险",
+      "needed_functions": ["Agent编排", "批处理", "质量审校", "权限与审计"],
+      "selection_rule": "只自动化规则清晰、输入稳定、结果可验收的环节"
+    }
+  ],
+  "functions": {
+    "general_assistant": {
+      "name": "通用 AI 助手",
+      "examples": ["ChatGPT", "Claude", "DeepSeek", "豆包", "Kimi"],
+      "check": ["数据使用条款", "地区可用性", "上下文与文件限制"]
+    },
+    "research": {
+      "name": "研究与知识整理",
+      "examples": ["NotebookLM", "Perplexity", "秘塔 AI 搜索", "ima.copilot"],
+      "check": ["引用可追溯性", "源文件权限", "联网范围"]
+    },
+    "coding": {
+      "name": "代码与产品开发",
+      "examples": ["Codex", "Cursor", "GitHub Copilot", "CodeBuddy", "Trae"],
+      "check": ["代码隐私", "仓库权限", "测试与人工验收"]
+    },
+    "design": {
+      "name": "设计与视觉",
+      "examples": ["Canva", "即梦", "Midjourney", "Nano Banana"],
+      "check": ["商用授权", "风格一致性", "人工质检"]
+    },
+    "video": {
+      "name": "视频生产",
+      "examples": ["剪映", "Runway", "Seedance", "可灵"],
+      "check": ["水印与授权", "人物肖像", "字幕和事实校验"]
+    },
+    "operations": {
+      "name": "任务、客户与知识管理",
+      "examples": ["飞书", "钉钉", "Notion", "企业微信"],
+      "check": ["成员权限", "数据导出", "客户隐私"]
+    },
+    "automation": {
+      "name": "自动化与 Agent 编排",
+      "examples": ["Make", "Zapier", "n8n", "Dify", "Coze"],
+      "check": ["失败重试", "人工审批点", "日志", "密钥管理"]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.DS_Store
+Thumbs.db
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+dist/
+build/
+*.tmp
+*.log
+
+.idea/
+.vscode/

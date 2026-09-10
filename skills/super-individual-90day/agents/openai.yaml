@@ -1,0 +1,4 @@
+interface:
+  display_name: "超级个体九十天计划"
+  short_description: "把能力目标拆分为每周任务、完成证据和阶段性复盘检查节点"
+  default_prompt: "Use $super-individual-90day to create a realistic 90-day transition plan from my current state."

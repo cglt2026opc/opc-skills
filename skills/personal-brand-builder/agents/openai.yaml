@@ -1,0 +1,4 @@
+interface:
+  display_name: "超级个体个人品牌"
+  short_description: "用真实案例、专业内容和市场记忆点建立可信赖的个人品牌"
+  default_prompt: "Use $personal-brand-builder to turn my real work into a credible personal brand."

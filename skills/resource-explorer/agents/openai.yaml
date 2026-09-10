@@ -1,0 +1,4 @@
+interface:
+  display_name: "OPC 工具与资源导航"
+  short_description: "按发展阶段、任务场景与预算选择适合的一人公司工具资源"
+  default_prompt: "Use $resource-explorer to find the smallest useful toolset for my current OPC stage."

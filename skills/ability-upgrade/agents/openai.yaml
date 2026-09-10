@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 时代能力升级"
+  short_description: "诊断产品思维与全栈能力缺口并生成可执行的九十天专业成长路径"
+  default_prompt: "Use $ability-upgrade to diagnose my capability gaps and build a practical upgrade plan."

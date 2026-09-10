@@ -1,0 +1,4 @@
+interface:
+  display_name: "一人公司价值定价"
+  short_description: "按照客户结果、交付证据和服务范围设计三档专业报价与沟通方案"
+  default_prompt: "Use $value-pricer to create an evidence-based three-tier pricing proposal."

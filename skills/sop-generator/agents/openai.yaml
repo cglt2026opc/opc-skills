@@ -1,0 +1,4 @@
+interface:
+  display_name: "一人公司 SOP 生成"
+  short_description: "把重复工作拆成可执行、可质检、可交接和可自动化的标准流程"
+  default_prompt: "Use $sop-generator to turn my recurring work into a clear, testable SOP."

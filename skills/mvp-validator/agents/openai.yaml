@@ -1,0 +1,4 @@
+interface:
+  display_name: "OPC 最小验证设计"
+  short_description: "用真实客户、真实交付和真实付费验证一人公司的商业假设"
+  default_prompt: "Use $mvp-validator to design the smallest credible paid validation for my idea."
