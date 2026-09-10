@@ -2,6 +2,8 @@
 
 本仓库以开放的 `SKILL.md` 目录结构维护同一套 Skills，并按各平台当前公开能力提供原生安装或兼容导出。
 
+默认安装一个 `ai-super-individual` 技能，内含书中 21 个 OPC 实战模块。单独技能包为可选导出；豆包提示词兼容版保留按模块选择。
+
 ## 支持级别
 
 | 平台 | 支持级别 | 安装位置或方式 | 调用方式 |
@@ -20,13 +22,13 @@
 
 ## 使用跨平台工具
 
-查看全部 Skill：
+查看默认集成技能（使用 `list --modules` 查看 21 个模块）：
 
 ```bash
 python3 scripts/opc_skills.py list
 ```
 
-安装全部 Skill：
+安装集成技能（只安装一个入口）：
 
 ```bash
 python3 scripts/opc_skills.py install --agent openclaw
@@ -34,7 +36,7 @@ python3 scripts/opc_skills.py install --agent hermes
 python3 scripts/opc_skills.py install --agent qwenwork
 ```
 
-只安装一个 Skill：
+可选：只安装某个独立模块：
 
 ```bash
 python3 scripts/opc_skills.py install \
@@ -62,10 +64,10 @@ OpenClaw 支持工作区 `skills/`、工作区 `.agents/skills/`、个人 `~/.ag
 python3 scripts/opc_skills.py install --agent openclaw
 ```
 
-也可以逐个使用 OpenClaw 自带命令安装本地目录：
+也可以使用 OpenClaw 自带命令安装集成目录：
 
 ```bash
-openclaw skills install ./skills/mvp-validator
+openclaw skills install ./skills/ai-super-individual
 ```
 
 ## Hermes Agent
@@ -81,13 +83,13 @@ hermes skills list
 
 ## WorkBuddy
 
-WorkBuddy 支持从界面上传本地技能包，并兼容 OpenClaw 生态 Skill。先生成每个 Skill 的独立 ZIP：
+WorkBuddy 支持从界面上传本地技能包，并兼容 OpenClaw 生态 Skill。默认生成一个集成 ZIP：
 
 ```bash
 python3 scripts/opc_skills.py package --agent workbuddy
 ```
 
-文件生成到 `dist/workbuddy/`。在 WorkBuddy 中打开“专家·技能·连接器”→“技能”→“添加技能”→“上传技能”，选择需要的 ZIP。
+文件生成到 `dist/workbuddy/ai-super-individual.zip`，内含一个技能入口与 21 个模块。在 WorkBuddy 中打开“专家·技能·连接器”→“技能”→“添加技能”→“上传技能”，选择该集成 ZIP。使用 `--skill mvp-validator` 可另外导出独立包。Release 的 `workbuddy-pack.zip` 需先解压，再上传里面的 `ai-super-individual.zip`。
 
 发布到 WorkBuddy 技能市场时，还需根据开放平台要求补充 `description_zh`、`description_en`、`version`、`author` 等上架元数据，并完成平台审核；本地上传包与市场发行包不能混为一谈。
 
@@ -109,9 +111,13 @@ python3 scripts/opc_skills.py install --agent qwenwork
 python3 scripts/opc_skills.py package --agent doubao
 ```
 
-生成文件位于 `dist/doubao/`。每个 `.prompt.md` 会包含 Skill 主流程和 Markdown 参考资料，可粘贴到豆包的自定义技能或工作任务说明中。
+生成文件位于 `dist/doubao/`。默认导出 21 份模块提示词，不是一个可按需读取本地文件的集成技能。每个 `.prompt.md` 会包含 Skill 主流程和 Markdown 参考资料，可粘贴到豆包的自定义技能或工作任务说明中。
 
 该方式不会自动携带 Python 脚本、Word/Excel 模板或宿主工具权限。使用包含这些资源的 Skill 时，应把模板作为附件另外上传，并在豆包界面中检查实际可用工具。
+
+## 旧版迁移
+
+新安装默认只有一个技能。此前的 21 个独立技能不会自动删除；确认集成版可用后，在平台中停用或移除它们。旧版源目录已迁移，之前安装的旧符号链接需要移除并重新安装。独立模块导出只支持复制模式，集成版支持符号链接。
 
 ## 安全与维护
 

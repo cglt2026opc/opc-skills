@@ -31,7 +31,7 @@ The following materials are excluded from the MIT License and remain all
 rights reserved by their respective copyright holders:
 
 - Files under docs/images/
-- Files under skills/*/assets/
+- Files under any assets/ directory within skills/ (including module assets)
 
 These excluded materials may not be copied, modified, redistributed, or used
 commercially except with permission from the applicable copyright holder or as

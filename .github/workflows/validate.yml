@@ -25,9 +25,12 @@ jobs:
         run: python3 scripts/validate_repo.py
 
       - name: Verify skill catalog count
-        run: test "$(python3 scripts/opc_skills.py list | wc -l)" -eq 21
+        run: test "$(python3 scripts/opc_skills.py list | wc -l)" -eq 1
+
+      - name: Test integrated and standalone distribution
+        run: python3 scripts/test_distribution.py
 
       - name: Smoke-test release packaging
         run: |
           python3 scripts/build_release.py --output /tmp/opc-skills-release
-          test "$(find /tmp/opc-skills-release -maxdepth 1 -type f -name '*.zip' | wc -l)" -eq 24
+          test "$(find /tmp/opc-skills-release -maxdepth 1 -type f -name '*.zip' | wc -l)" -eq 25

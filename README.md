@@ -8,7 +8,9 @@
 
 本仓库是菜根老谭编著的《AI超级个体：一人公司（OPC）创富手册》（机械工业出版社，ISBN 978-7-111-81776-5）的配套 Skills 集合。
 
-全书讲解如何识别个人优势、定位可交付产品，并借助 AI 完成获客、销售、交付、运营与增长；本仓库则把其中的关键方法封装成 **21 个可复用的 AI Skills**。你可以把它们当作一套随书行动工具：边读、边问、边做，让知识最终落到一次真实访谈、一份报价、一个 MVP 或一套可运行的业务流程上。
+全书讲解如何识别个人优势、定位可交付产品，并借助 AI 完成获客、销售、交付、运营与增长；本仓库则把书中 **“20+ 个 OPC 技能包”集成为一个 AI 超级个体实战助手，内含 21 个可复用模块**。你可以把它们当作一套随书行动工具：边读、边问、边做，让知识最终落到一次真实访谈、一份报价、一个 MVP 或一套可运行的业务流程上。
+
+**默认只安装一个技能：`ai-super-individual`。** 直接说出问题，助手按需选择内部模块；原有 21 个独立包仍可选下载。
 
 机器或安装器可通过 [`catalog.json`](catalog.json) 获取版本、书籍信息、技能名称、阶段和路径。
 
@@ -43,7 +45,7 @@ Skills 不会替你虚构市场需求或跳过真实验证。涉及客户需求�
 
 ## 从哪里开始
 
-如果你暂时不知道该选哪个 Skill，可以直接从下面三条路线开始。
+默认使用统一助手，不需要挑选技能。下面三条路线展示内部模块如何衔接，也方便按书中名称查找。
 
 ### 路线一：从职业焦虑到升级行动
 
@@ -65,141 +67,131 @@ Skills 不会替你虚构市场需求或跳过真实验证。涉及客户需求�
 
 `case-explorer`、`resource-explorer` 和 `opc-prompt-workbench` 可以在任何阶段作为案例、工具与提示词工作台使用。
 
-## 21 个配套 Skills
+## 内含 21 个 OPC 实战技能包
 
 ### 1. 觉醒与诊断
 
 | Skill | 用途 | 你可以这样问 |
 | --- | --- | --- |
-| [`career-diagnostic`](skills/career-diagnostic/) | 评估岗位的 AI 替代风险与职业转型方向 | “评估一下我的岗位安全吗？” |
-| [`super-individual-assessment`](skills/super-individual-assessment/) | 按四大支柱完成证据化能力自测 | “我离 AI 超级个体还有多远？” |
-| [`dreyfus-ai-assessor`](skills/dreyfus-ai-assessor/) | 用德雷福斯五阶段模型判断一项技能的水平与 AI 风险 | “评估我的产品设计能力在哪一级。” |
-| [`case-explorer`](skills/case-explorer/) | 从书中 25 个案例里匹配并拆解最相关案例 | “哪个书中案例最适合我参考？” |
+| [`career-diagnostic`](skills/ai-super-individual/references/modules/career-diagnostic/WORKFLOW.md) | 评估岗位的 AI 替代风险与职业转型方向 | “评估一下我的岗位安全吗？” |
+| [`super-individual-assessment`](skills/ai-super-individual/references/modules/super-individual-assessment/WORKFLOW.md) | 按四大支柱完成证据化能力自测 | “我离 AI 超级个体还有多远？” |
+| [`dreyfus-ai-assessor`](skills/ai-super-individual/references/modules/dreyfus-ai-assessor/WORKFLOW.md) | 用德雷福斯五阶段模型判断一项技能的水平与 AI 风险 | “评估我的产品设计能力在哪一级。” |
+| [`case-explorer`](skills/ai-super-individual/references/modules/case-explorer/WORKFLOW.md) | 从书中 25 个案例里匹配并拆解最相关案例 | “哪个书中案例最适合我参考？” |
 
 ### 2. 能力与定位
 
 | Skill | 用途 | 你可以这样问 |
 | --- | --- | --- |
-| [`ability-upgrade`](skills/ability-upgrade/) | 训练技术理解、产品思维、业务洞察与推进落地能力 | “帮我从执行者升级为价值操盘手。” |
-| [`capability-productizer`](skills/capability-productizer/) | 判断哪些能力适合产品化，并设计首个付费实验 | “我会这些技能，哪一个最值得先卖？” |
-| [`opc-positioner`](skills/opc-positioner/) | 基于能力与市场完成一人公司差异化定位 | “帮我找到适合的一人公司方向。” |
-| [`personal-brand-builder`](skills/personal-brand-builder/) | 从真实成果中提炼人设和个人品牌 | “怎样让目标客户更容易记住我？” |
+| [`ability-upgrade`](skills/ai-super-individual/references/modules/ability-upgrade/WORKFLOW.md) | 训练技术理解、产品思维、业务洞察与推进落地能力 | “帮我从执行者升级为价值操盘手。” |
+| [`capability-productizer`](skills/ai-super-individual/references/modules/capability-productizer/WORKFLOW.md) | 判断哪些能力适合产品化，并设计首个付费实验 | “我会这些技能，哪一个最值得先卖？” |
+| [`opc-positioner`](skills/ai-super-individual/references/modules/opc-positioner/WORKFLOW.md) | 基于能力与市场完成一人公司差异化定位 | “帮我找到适合的一人公司方向。” |
+| [`personal-brand-builder`](skills/ai-super-individual/references/modules/personal-brand-builder/WORKFLOW.md) | 从真实成果中提炼人设和个人品牌 | “怎样让目标客户更容易记住我？” |
 
 ### 3. 产品与商业验证
 
 | Skill | 用途 | 你可以这样问 |
 | --- | --- | --- |
-| [`opc-modeler`](skills/opc-modeler/) | 梳理一人公司商业模式画布的 9 个要素 | “为我的咨询业务做一张 OPC 商业画布。” |
-| [`kano-prioritizer`](skills/kano-prioritizer/) | 用 KANO 框架分类需求并安排产品优先级 | “这 8 个功能应该先做哪几个？” |
-| [`mvp-validator`](skills/mvp-validator/) | 设计真实客户、真实交付、真实付费的最小实验 | “帮我用 14 天验证这个课程想法。” |
-| [`value-pricer`](skills/value-pricer/) | 按客户价值设计三档报价与沟通话术 | “为这项服务设计基础、标准和高阶报价。” |
-| [`opc-startup-readiness`](skills/opc-startup-readiness/) | 用 12 项清单评估副业启动或全职创业准备度 | “我现在适合启动一人公司吗？” |
-| [`side-income-launcher`](skills/side-income-launcher/) | 在职期间低风险完成第一次副业变现 | “怎样把经常帮人的事变成第一笔收入？” |
+| [`opc-modeler`](skills/ai-super-individual/references/modules/opc-modeler/WORKFLOW.md) | 梳理一人公司商业模式画布的 9 个要素 | “为我的咨询业务做一张 OPC 商业画布。” |
+| [`kano-prioritizer`](skills/ai-super-individual/references/modules/kano-prioritizer/WORKFLOW.md) | 用 KANO 框架分类需求并安排产品优先级 | “这 8 个功能应该先做哪几个？” |
+| [`mvp-validator`](skills/ai-super-individual/references/modules/mvp-validator/WORKFLOW.md) | 设计真实客户、真实交付、真实付费的最小实验 | “帮我用 14 天验证这个课程想法。” |
+| [`value-pricer`](skills/ai-super-individual/references/modules/value-pricer/WORKFLOW.md) | 按客户价值设计三档报价与沟通话术 | “为这项服务设计基础、标准和高阶报价。” |
+| [`opc-startup-readiness`](skills/ai-super-individual/references/modules/opc-startup-readiness/WORKFLOW.md) | 用 12 项清单评估副业启动或全职创业准备度 | “我现在适合启动一人公司吗？” |
+| [`side-income-launcher`](skills/ai-super-individual/references/modules/side-income-launcher/WORKFLOW.md) | 在职期间低风险完成第一次副业变现 | “怎样把经常帮人的事变成第一笔收入？” |
 
 ### 4. 获客、交付与运营
 
 | Skill | 用途 | 你可以这样问 |
 | --- | --- | --- |
-| [`content-planner`](skills/content-planner/) | 规划公众号、视频号、小红书、抖音等内容矩阵 | “围绕我的定位做一个月内容计划。” |
-| [`sop-generator`](skills/sop-generator/) | 把重复工作变成可执行、可检查、可交接的 SOP | “把客户入驻流程整理成 SOP。” |
-| [`ai-team-builder`](skills/ai-team-builder/) | 按业务流程配置 AI 虚拟团队和工具组合 | “为我的一人咨询公司搭一支 AI 团队。” |
-| [`opc-prompt-workbench`](skills/opc-prompt-workbench/) | 定制书中 16 个高频场景的可执行提示词 | “给我一份用于客户需求分析的提示词。” |
-| [`resource-explorer`](skills/resource-explorer/) | 按业务阶段、预算和任务选择最小工具组合 | “我在刚起步阶段，应该先用哪些 AI 工具？” |
+| [`content-planner`](skills/ai-super-individual/references/modules/content-planner/WORKFLOW.md) | 规划公众号、视频号、小红书、抖音等内容矩阵 | “围绕我的定位做一个月内容计划。” |
+| [`sop-generator`](skills/ai-super-individual/references/modules/sop-generator/WORKFLOW.md) | 把重复工作变成可执行、可检查、可交接的 SOP | “把客户入驻流程整理成 SOP。” |
+| [`ai-team-builder`](skills/ai-super-individual/references/modules/ai-team-builder/WORKFLOW.md) | 按业务流程配置 AI 虚拟团队和工具组合 | “为我的一人咨询公司搭一支 AI 团队。” |
+| [`opc-prompt-workbench`](skills/ai-super-individual/references/modules/opc-prompt-workbench/WORKFLOW.md) | 定制书中 16 个高频场景的可执行提示词 | “给我一份用于客户需求分析的提示词。” |
+| [`resource-explorer`](skills/ai-super-individual/references/modules/resource-explorer/WORKFLOW.md) | 按业务阶段、预算和任务选择最小工具组合 | “我在刚起步阶段，应该先用哪些 AI 工具？” |
 
 ### 5. 行动与增长
 
 | Skill | 用途 | 你可以这样问 |
 | --- | --- | --- |
-| [`super-individual-90day`](skills/super-individual-90day/) | 把目标拆成每周可执行的 90 天行动计划 | “从今天起给我制定一份 90 天计划。” |
-| [`growth-tracker`](skills/growth-tracker/) | 制定和复盘收入、渠道、合作与季度增长计划 | “帮我制定一人公司的年度增长计划。” |
+| [`super-individual-90day`](skills/ai-super-individual/references/modules/super-individual-90day/WORKFLOW.md) | 把目标拆成每周可执行的 90 天行动计划 | “从今天起给我制定一份 90 天计划。” |
+| [`growth-tracker`](skills/ai-super-individual/references/modules/growth-tracker/WORKFLOW.md) | 制定和复盘收入、渠道、合作与季度增长计划 | “帮我制定一人公司的年度增长计划。” |
 
 ## 安装
 
-`skills/` 中的每个子目录都是一个独立 Skill，可以只安装需要的几个，也可以安装全部。
+默认安装一个集成技能 `ai-super-individual`，内部包含全部 21 个实战模块。各平台方式与限制见[智能体兼容与安装指南](docs/AGENT-COMPATIBILITY.md)。
 
-本仓库同时支持 Codex、Cursor、Gemini CLI、GitHub Copilot、OpenClaw、Hermes Agent、WorkBuddy 和千问办公；豆包办公通过提示词兼容包使用。各平台的支持级别、安装路径与限制见[智能体兼容与安装指南](docs/AGENT-COMPATIBILITY.md)。
+### 默认安装：一个助手
 
-### 跨智能体快速安装
-
-使用仓库内的统一工具，可以安装全部 Skill，也可以通过重复传入 `--skill` 只选择需要的几个：
+在仓库根目录执行：
 
 ```bash
-# OpenClaw
 python3 scripts/opc_skills.py install --agent openclaw
-
-# Hermes Agent
 python3 scripts/opc_skills.py install --agent hermes
-
-# 千问办公 / QwenWork
 python3 scripts/opc_skills.py install --agent qwenwork
-
-# 查看所有可用名称和更多参数
-python3 scripts/opc_skills.py list
-python3 scripts/opc_skills.py install --help
+# Codex、Cursor、Gemini CLI、Copilot 使用对应的 --agent 参数
+python3 scripts/opc_skills.py install --agent codex
 ```
 
-WorkBuddy 使用界面上传的 ZIP 包；豆包办公使用可粘贴的提示词兼容包：
+只需执行自己所用平台对应的一行。默认复制，不覆盖同名技能；开发时可加 `--mode link`。
+
+WorkBuddy 生成一个上传包：
 
 ```bash
 python3 scripts/opc_skills.py package --agent workbuddy
+```
+
+上传 `dist/workbuddy/ai-super-individual.zip`，包中只有一个技能入口。
+
+### 可选：只用书中某个技能包
+
+```bash
+python3 scripts/opc_skills.py list --modules
+python3 scripts/opc_skills.py install --agent openclaw --skill mvp-validator
+python3 scripts/opc_skills.py package --agent workbuddy --skill mvp-validator
+```
+
+独立包从同一份模块源码生成，保留原技能名称；无需与集成版一起安装。独立模块安装使用复制模式。
+
+豆包办公使用按模块导出的提示词兼容包，不能依靠本地文件按需加载，因此保留 21 份可选提示词：
+
+```bash
 python3 scripts/opc_skills.py package --agent doubao
 ```
 
-也可以从 [GitHub Releases](https://github.com/cglt2026opc/opc-skills/releases) 直接下载。每个版本提供全集包 `opc-skills-all.zip`、21 个单独 Skill ZIP、`workbuddy-pack.zip` 和 `doubao-prompt-pack.zip`。
+### 从旧版迁移
 
-维护者发布新版本时，先更新 `catalog.json` 中的 `version`，再推送同版本标签；例如版本 `0.2.0` 对应标签 `v0.2.0`。标签推送后会自动校验、打包并创建 GitHub Release。本地可提前运行：
+如果此前装过 21 个独立技能，安装集成版后旧技能仍会保留。确认集成版可用后，在对应平台停用或移除原有独立技能，最终仅保留 `ai-super-individual`。安装器会提示检测到的旧版目录，不会自动删除；`--force` 仅替换同名目标。
+
+旧的 `skills/<原技能名>/` 源码路径已迁移；若之前采用符号链接安装，应移除失效旧链接后重新安装。旧版生成目录中已有的 ZIP 也不会自动清除，WorkBuddy 请只上传本次的集成包。
+
+### 发布下载
+
+[GitHub Releases](https://github.com/cglt2026opc/opc-skills/releases) 的新版发布产物包含：
+
+- `ai-super-individual.zip`：默认集成版，一个技能，21 个模块。
+- `opc-skills-all.zip`：集成版全集，保持原下载文件名，内部只有一个技能目录。
+- `workbuddy-pack.zip`：解压后取得一个 `ai-super-individual.zip`，上传内层 ZIP。
+- 21 个原名称的独立 Skill ZIP：供按需选择。
+- `doubao-prompt-pack.zip`：21 份模块提示词兼容版。
+
+维护者更新 `catalog.json` 版本后推送对应标签即可触发发布。本地验证：
 
 ```bash
 python3 scripts/build_release.py --tag v0.2.0
 ```
 
-### 安装单个 Skill
-
-在仓库根目录执行：
-
-```bash
-mkdir -p "$HOME/.agents/skills"
-cp -R skills/super-individual-assessment "$HOME/.agents/skills/"
-```
-
-把 `super-individual-assessment` 替换成其他目录名即可。
-
-### 安装全部 Skills
-
-下面的方式使用符号链接，更新仓库后无需再次复制：
-
-```bash
-mkdir -p "$HOME/.agents/skills"
-
-for skill_file in skills/*/SKILL.md; do
-  skill_dir="${skill_file%/SKILL.md}"
-  target="$HOME/.agents/skills/$(basename "$skill_dir")"
-  [ -e "$target" ] || ln -s "$PWD/$skill_dir" "$target"
-done
-```
-
-Codex 通常会自动识别新增或更新的 Skill；如果没有出现，请重启 Codex。更多格式与加载位置说明见 [OpenAI Skills 官方文档](https://developers.openai.com/codex/skills)。
-
 ## 使用
 
-安装后有两种调用方式：
-
-1. **直接描述任务**：例如“帮我评估这个产品想法”，Codex 会根据 Skill 的描述自动选择。
-2. **显式指定 Skill**：输入 `$mvp-validator`，再补充你的想法、目标客户和现有证据。
-
-建议尽量提供真实背景，包括目标用户、做过的项目、交付结果、时间预算和约束条件。信息越具体，输出越接近可执行方案。
-
-一个完整示例：
+直接描述任务，例如“帮我判断供应链经验能做什么副业”，助手会选择相关模块。也可以显式调用统一入口：
 
 ```text
-$capability-productizer
+$ai-super-individual
 
 我是一名有 8 年经验的供应链经理，每周能投入 8 小时。
 过去一年帮两家朋友的公司降低过库存积压，但没有正式收费。
-请帮我判断这项能力是否适合产品化，并设计一个 14 天内能完成的付费验证。
+请用能力产品化模块，帮我设计一个 14 天内能完成的付费验证。
 ```
 
-你也可以继续追问：“把结果整理成行动清单”“指出哪些结论还缺证据”“为第一位访谈对象写邀请话术”。
+在集成版里说“使用 mvp-validator 模块”即可按原名称选择流程。只有单独安装了独立包时，才使用对应的独立技能调用方式。
 
 ## 随附资源
 
@@ -210,18 +202,22 @@ $capability-productizer
 - 确定性脚本：用于测评分数、准备度判定、能力筛选和需求排序，减少重复计算误差。
 - 书中 16 个高频场景的 Prompt 模板库。
 
-典型目录结构如下：
+集成版目录结构：
 
 ```text
-skill-name/
-├── SKILL.md          # 工作流、触发条件与输出要求
-├── agents/           # Codex 展示信息
-├── references/       # 方法、规则或结构化数据（可选）
-├── scripts/          # 确定性计算脚本（可选）
-└── assets/           # Word、Excel、图片等配套材料（可选）
+skills/ai-super-individual/
+├── SKILL.md                       # 唯一技能入口和路由
+├── agents/                        # 助手展示信息
+└── references/modules/
+    └── <原技能名>/
+        ├── WORKFLOW.md            # 按需读取的模块流程
+        ├── references/           # 方法和数据（可选）
+        ├── scripts/              # 计算脚本（可选）
+        ├── assets/               # 原配套模板（可选）
+        └── agents/               # 独立导出时使用的展示信息
 ```
 
-仓库中的实际路径为 `skills/<skill-name>/`。贡献和本地校验方法见[贡献指南](CONTRIBUTING.md)，安全问题请按[安全说明](SECURITY.md)私下报告。
+21 个模块只维护一份源码；内部不使用 `SKILL.md` 命名，避免被识别为额外技能。贡献和本地校验见[贡献指南](CONTRIBUTING.md)。
 
 ## 书与 Skills 的配合方式
 
@@ -265,7 +261,7 @@ skill-name/
 
 ## 许可证
 
-Agent Skill 指令、脚本和仓库文档采用 [MIT License](LICENSE)。`docs/images/` 中的书籍与作者图片，以及 `skills/*/assets/` 下的 Word、Excel、图片等配套素材不在 MIT 授权范围内，版权归相应权利人所有，具体边界见许可证文件。
+Agent Skill 指令、脚本和仓库文档采用 [MIT License](LICENSE)。`docs/images/` 中的书籍与作者图片，以及 `skills/` 下各模块的 `assets/` 下的 Word、Excel、图片等配套素材不在 MIT 授权范围内，版权归相应权利人所有，具体边界见许可证文件。
 
 ---
 

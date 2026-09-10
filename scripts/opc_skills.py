@@ -4,14 +4,18 @@
 from __future__ import annotations
 
 import argparse
+import contextlib
 import shutil
 import sys
+import tempfile
 import zipfile
 from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SKILLS_ROOT = REPO_ROOT / "skills"
+DEFAULT_SKILL = "ai-super-individual"
+MODULES_ROOT = SKILLS_ROOT / DEFAULT_SKILL / "references" / "modules"
 
 AGENT_TARGETS = {
     "codex": Path("~/.agents/skills").expanduser(),
@@ -32,21 +36,45 @@ def discover_skills() -> dict[str, Path]:
     return skills
 
 
-def selected_skills(names: list[str]) -> dict[str, Path]:
-    available = discover_skills()
-    if not names:
-        return available
+def discover_modules() -> dict[str, Path]:
+    return {
+        path.name: path for path in sorted(MODULES_ROOT.iterdir())
+        if (path / "WORKFLOW.md").is_file()
+    }
 
-    missing = sorted(set(names) - set(available))
+
+@contextlib.contextmanager
+def selected_skills(names: list[str]):
+    """Export optional standalone skills from the canonical modules."""
+    available = discover_skills()
+    modules = discover_modules()
+    if not names:
+        yield available
+        return
+    missing = sorted(set(names) - set(available) - set(modules))
     if missing:
-        raise ValueError(
-            f"未知 Skill：{', '.join(missing)}。运行 list 查看可用名称。"
-        )
-    return {name: available[name] for name in names}
+        raise ValueError(f"未知 Skill：{', '.join(missing)}。运行 list --modules 查看模块。")
+    with tempfile.TemporaryDirectory(prefix="opc-standalone-") as temporary:
+        selected = {}
+        for name in dict.fromkeys(names):
+            if name in available:
+                selected[name] = available[name]
+            else:
+                target = Path(temporary) / name
+                shutil.copytree(modules[name], target, ignore=shutil.ignore_patterns("__pycache__", "*.pyc", ".DS_Store"))
+                (target / "WORKFLOW.md").rename(target / "SKILL.md")
+                selected[name] = target
+        yield selected
 
 
 def install(args: argparse.Namespace) -> int:
-    skills = selected_skills(args.skill)
+    if args.mode == "link" and any(name in discover_modules() for name in args.skill):
+        raise ValueError("独立模块导出仅支持 --mode copy；集成版支持 --mode link。")
+    with selected_skills(args.skill) as skills:
+        return install_selected(args, skills)
+
+
+def install_selected(args: argparse.Namespace, skills: dict[str, Path]) -> int:
     target_root = (
         Path(args.target).expanduser().resolve()
         if args.target
@@ -55,6 +83,9 @@ def install(args: argparse.Namespace) -> int:
 
     print(f"目标智能体：{args.agent}")
     print(f"安装目录：{target_root}")
+    old_names = [name for name in discover_modules() if (target_root / name).exists() or (target_root / name).is_symlink()]
+    if DEFAULT_SKILL in skills and old_names:
+        print(f"[迁移提示] 检测到 {len(old_names)} 个旧版独立技能；本次保留，请在确认集成版可用后自行停用或移除。")
     if args.dry_run:
         for name in skills:
             print(f"[预览] {name} -> {target_root / name}")
@@ -84,7 +115,7 @@ def install(args: argparse.Namespace) -> int:
                     f"无法为 {name} 创建符号链接；请改用 --mode copy。原始错误：{exc}"
                 ) from exc
         else:
-            shutil.copytree(source, target)
+            shutil.copytree(source, target, ignore=shutil.ignore_patterns("__pycache__", "*.pyc", ".DS_Store"))
 
         print(f"[已安装] {name}")
         installed += 1
@@ -121,7 +152,8 @@ def package_workbuddy(skills: dict[str, Path], output: Path) -> None:
         archive = output / f"{name}.zip"
         with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED) as bundle:
             for item in sorted(source.rglob("*")):
-                if item.is_file():
+                if (item.is_file() and item.name not in {".DS_Store", "Thumbs.db"}
+                        and "__pycache__" not in item.parts and item.suffix not in {".pyc", ".pyo"}):
                     bundle.write(item, Path(name) / item.relative_to(source))
         print(f"[已生成] {archive}")
 
@@ -172,13 +204,20 @@ def package_doubao(skills: dict[str, Path], output: Path) -> None:
 
 
 def package(args: argparse.Namespace) -> int:
-    skills = selected_skills(args.skill)
     output = Path(args.output).expanduser().resolve() / args.agent
-    if args.agent == "workbuddy":
-        package_workbuddy(skills, output)
-    else:
-        package_doubao(skills, output)
-    print(f"完成：生成 {len(skills)} 个 {args.agent} 兼容包。")
+    # A paste-only host cannot follow a local router: export the modules directly.
+    names = args.skill
+    missing = set(names) - set(discover_skills()) - set(discover_modules())
+    if missing:
+        raise ValueError(f"未知 Skill：{', '.join(sorted(missing))}。")
+    if args.agent == "doubao" and (not names or DEFAULT_SKILL in names):
+        names = list(discover_modules())
+    with selected_skills(names) as skills:
+        if args.agent == "workbuddy":
+            package_workbuddy(skills, output)
+        else:
+            package_doubao(skills, output)
+        print(f"完成：生成 {len(skills)} 个 {args.agent} 兼容包。")
     return 0
 
 
@@ -188,13 +227,14 @@ def build_parser() -> argparse.ArgumentParser:
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    subparsers.add_parser("list", help="列出仓库中的全部 Skills。")
+    list_parser = subparsers.add_parser("list", help="列出默认安装的集成技能。")
+    list_parser.add_argument("--modules", action="store_true", help="列出可选的 21 个独立模块。")
 
     install_parser = subparsers.add_parser(
         "install", help="安装到支持本地 SKILL.md 的智能体。"
     )
     install_parser.add_argument("--agent", choices=sorted(AGENT_TARGETS), required=True)
-    install_parser.add_argument("--skill", action="append", default=[], help="只安装指定 Skill；可重复使用。")
+    install_parser.add_argument("--skill", action="append", default=[], help="默认安装一个集成技能；指定旧模块名可单独安装，可重复使用。")
     install_parser.add_argument("--mode", choices=("copy", "link"), default="copy")
     install_parser.add_argument("--target", help="覆盖默认安装目录。")
     install_parser.add_argument("--force", action="store_true", help="替换已存在的同名 Skill。")
@@ -204,7 +244,7 @@ def build_parser() -> argparse.ArgumentParser:
         "package", help="生成 WorkBuddy 上传包或豆包办公提示词兼容包。"
     )
     package_parser.add_argument("--agent", choices=("workbuddy", "doubao"), required=True)
-    package_parser.add_argument("--skill", action="append", default=[], help="只导出指定 Skill；可重复使用。")
+    package_parser.add_argument("--skill", action="append", default=[], help="默认导出集成版（豆包为模块提示词）；指定模块名可单独导出。")
     package_parser.add_argument("--output", default="dist", help="输出根目录，默认 dist。")
 
     return parser
@@ -215,7 +255,7 @@ def main() -> int:
     args = parser.parse_args()
     try:
         if args.command == "list":
-            for name in discover_skills():
+            for name in (discover_modules() if args.modules else discover_skills()):
                 print(name)
             return 0
         if args.command == "install":

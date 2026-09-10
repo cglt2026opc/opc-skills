@@ -13,7 +13,7 @@ import tempfile
 import zipfile
 from pathlib import Path
 
-from opc_skills import discover_skills, package_doubao
+from opc_skills import discover_skills, discover_modules, selected_skills, package_doubao
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -116,6 +116,7 @@ def expected_asset_names(skills: dict[str, Path]) -> set[str]:
         "workbuddy-pack.zip",
         "doubao-prompt-pack.zip",
         *(f"{name}.zip" for name in skills),
+        *(f"{name}.zip" for name in discover_modules()),
     }
 
 
@@ -138,10 +139,10 @@ def verify_release(output: Path, skills: dict[str, Path]) -> None:
             raise RuntimeError("workbuddy-pack.zip 中的单独 Skill ZIP 集合不正确。")
 
     with zipfile.ZipFile(output / "doubao-prompt-pack.zip") as bundle:
-        if set(bundle.namelist()) != {f"{name}.prompt.md" for name in skills}:
+        if set(bundle.namelist()) != {f"{name}.prompt.md" for name in discover_modules()}:
             raise RuntimeError("doubao-prompt-pack.zip 中的提示词集合不正确。")
 
-    for name in skills:
+    for name in [*skills, *discover_modules()]:
         with zipfile.ZipFile(output / f"{name}.zip") as bundle:
             if f"{name}/SKILL.md" not in bundle.namelist():
                 raise RuntimeError(f"{name}.zip 缺少 {name}/SKILL.md。")
@@ -162,15 +163,17 @@ def build(output: Path, tag: str | None) -> None:
     version = catalog_version()
     validate_tag(tag, version)
     skills = discover_skills()
-    if len(skills) != 21:
-        raise RuntimeError(f"预期 21 个 Skills，实际发现 {len(skills)} 个。")
+    if len(skills) != 1 or len(discover_modules()) != 21:
+        raise RuntimeError("预期 1 个集成技能和 21 个模块。")
 
     prepare_output(output)
 
     write_all_skills(skills, output)
     individual_archives = write_individual_skills(skills, output)
     write_workbuddy_pack(individual_archives, output)
-    write_doubao_pack(skills, output)
+    with selected_skills(list(discover_modules())) as standalone:
+        write_individual_skills(standalone, output)
+        write_doubao_pack(standalone, output)
     verify_release(output, skills)
 
     print(f"发布版本：v{version}")

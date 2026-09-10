@@ -38,9 +38,9 @@ def parse_frontmatter(path: Path) -> tuple[dict[str, str], list[str]]:
     return metadata, errors
 
 
-def validate_skill(skill_dir: Path) -> list[str]:
+def validate_skill(skill_dir: Path, filename: str = "SKILL.md") -> list[str]:
     errors: list[str] = []
-    skill_file = skill_dir / "SKILL.md"
+    skill_file = skill_dir / filename
     metadata, parse_errors = parse_frontmatter(skill_file)
     errors.extend(parse_errors)
 
@@ -101,7 +101,29 @@ def main() -> int:
         )
         return 1
 
+    from opc_skills import discover_modules, DEFAULT_SKILL
+    modules = discover_modules()
+    if catalog.get("default_skill") != DEFAULT_SKILL or len(skill_dirs) != 1:
+        print("错误：必须只有一个默认集成技能。", file=sys.stderr)
+        return 1
+    if len(modules) != 21 or {item["name"] for item in catalog.get("modules", [])} != set(modules):
+        print("错误：catalog 模块与 21 个内部模块不一致。", file=sys.stderr)
+        return 1
+    for item in [*catalog["skills"], *catalog["modules"]]:
+        expected = SKILLS_ROOT / item["name"] if item["name"] == DEFAULT_SKILL else modules[item["name"]]
+        if REPO_ROOT / item["path"] != expected:
+            print(f"错误：catalog 路径不正确：{item['name']}", file=sys.stderr)
+            return 1
+    nested = list(SKILLS_ROOT.rglob("SKILL.md"))
+    if len(nested) != 1:
+        print("错误：集成包内不应出现嵌套 SKILL.md。", file=sys.stderr)
+        return 1
     failures = 0
+    for module in modules.values():
+        for error in validate_skill(module, "WORKFLOW.md"):
+            failures += 1
+            print(f"[失败] {module.name}: {error}")
+
     for skill_dir in skill_dirs:
         errors = validate_skill(skill_dir)
         if errors:
@@ -114,7 +136,7 @@ def main() -> int:
     if failures:
         print(f"校验失败：{failures} 个问题。", file=sys.stderr)
         return 1
-    print(f"校验通过：{len(skill_dirs)} 个 Skills。")
+    print(f"校验通过：{len(skill_dirs)} 个集成 Skill，21 个模块。")
     return 0
 
 

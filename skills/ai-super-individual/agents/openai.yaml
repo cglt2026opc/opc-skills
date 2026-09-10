@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI超级个体实战助手"
+  short_description: "集成书中21个OPC实战模块，支持能力诊断、变现验证与一人公司经营"
+  default_prompt: "使用 $ai-super-individual，根据我的现状选择合适的实战模块，帮我推进下一步行动。"
