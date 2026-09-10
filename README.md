@@ -145,6 +145,14 @@ python3 scripts/opc_skills.py package --agent workbuddy
 python3 scripts/opc_skills.py package --agent doubao
 ```
 
+也可以从 [GitHub Releases](https://github.com/cglt2026opc/opc-skills/releases) 直接下载。每个版本提供全集包 `opc-skills-all.zip`、21 个单独 Skill ZIP、`workbuddy-pack.zip` 和 `doubao-prompt-pack.zip`。
+
+维护者发布新版本时，先更新 `catalog.json` 中的 `version`，再推送同版本标签；例如版本 `0.2.0` 对应标签 `v0.2.0`。标签推送后会自动校验、打包并创建 GitHub Release。本地可提前运行：
+
+```bash
+python3 scripts/build_release.py --tag v0.2.0
+```
+
 ### 安装单个 Skill
 
 在仓库根目录执行：
