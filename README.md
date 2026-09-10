@@ -130,6 +130,8 @@ hermes skills install cglt2026opc/opc-skills/skills/ai-super-individual
 
 安装后，在 Hermes 对话中输入 `/ai-super-individual`，或直接描述要解决的问题。这个公开 Tap 提供一个集成技能，包含全部 21 个模块；添加 Tap 后可通过 `hermes skills search ai-super-individual --source github` 查找。
 
+部分旧版 Hermes 的 Hub 下载器无法完整保留 Word、Excel 和图片素材，或因集成包大小触发扫描限制；遇到这些情况请使用下方本地安装器，详见 [Hermes 安装兼容说明](docs/AGENT-COMPATIBILITY.md#hermes-agent)。
+
 在仓库根目录执行：
 
 ```bash

@@ -91,6 +91,16 @@ hermes skills install cglt2026opc/opc-skills/skills/ai-super-individual
 
 这是可订阅的社区 Tap，不代表进入 Hermes 官方默认技能源。维护者将更新推送至本仓库默认分支后，用户即可从同一路径获取新版。Tap 目录规范见 [Hermes 官方发布说明](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills#publishing-a-custom-skill-tap)。
 
+**旧版 Hermes 安装兼容性：** 部分版本的 GitHub 下载器按文本处理所有文件，可能损坏本技能中的 Word、Excel 和 PNG 配套素材；集成包的文件数量和图片大小也可能触发 `CAUTION`。如果遇到这些问题，请使用下面的完整本地安装方式，保留全部素材的原始字节：
+
+```bash
+git clone https://github.com/cglt2026opc/opc-skills.git
+cd opc-skills
+python3 scripts/opc_skills.py install --agent hermes
+```
+
+如果已通过 Hub 安装同名技能，请先备份自己的改动，再给本地安装命令加 `--force` 替换同名目标。不要仅为绕过文件损坏问题给 Hub 安装命令加 `--force`，该参数不会修复下载器。
+
 ## WorkBuddy
 
 WorkBuddy 支持从界面上传本地技能包，并兼容 OpenClaw 生态 Skill。默认生成一个集成 ZIP：
