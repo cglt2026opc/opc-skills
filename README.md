@@ -121,6 +121,15 @@ Skills 不会替你虚构市场需求或跳过真实验证。涉及客户需求�
 
 ### 默认安装：一个助手
 
+Hermes 用户可以直接通过 Skills Hub 添加本仓库 Tap 并安装，无需克隆仓库：
+
+```bash
+hermes skills tap add cglt2026opc/opc-skills
+hermes skills install cglt2026opc/opc-skills/skills/ai-super-individual
+```
+
+安装后，在 Hermes 对话中输入 `/ai-super-individual`，或直接描述要解决的问题。这个公开 Tap 提供一个集成技能，包含全部 21 个模块；添加 Tap 后可通过 `hermes skills search ai-super-individual --source github` 查找。
+
 在仓库根目录执行：
 
 ```bash

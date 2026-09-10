@@ -79,7 +79,17 @@ python3 scripts/opc_skills.py install --agent hermes
 hermes skills list
 ```
 
-仓库公开发布后，也可以将其登记为 Hermes tap，让用户按 GitHub 仓库和 Skill 路径安装。
+本仓库已作为公开的自定义 Hermes Tap 提供，也可以通过 Skills Hub 直接安装：
+
+```bash
+hermes skills tap add cglt2026opc/opc-skills
+hermes skills search ai-super-individual --source github
+hermes skills install cglt2026opc/opc-skills/skills/ai-super-individual
+```
+
+安装后在对话中使用 `/ai-super-individual`。只安装单个技能时，可以省略 `tap add`，直接执行完整路径的安装命令。Hub 安装会执行安全扫描并记录来源，安装位置由 Hermes 管理；上面的本地安装器则使用 `opc-skills/` 分类目录，两种方式选择一种即可。
+
+这是可订阅的社区 Tap，不代表进入 Hermes 官方默认技能源。维护者将更新推送至本仓库默认分支后，用户即可从同一路径获取新版。Tap 目录规范见 [Hermes 官方发布说明](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills#publishing-a-custom-skill-tap)。
 
 ## WorkBuddy
 

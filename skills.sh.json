@@ -1,0 +1,9 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "groupings": [
+    {
+      "title": "AI超级个体与一人公司（OPC）",
+      "skills": ["ai-super-individual"]
+    }
+  ]
+}
