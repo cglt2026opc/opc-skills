@@ -12,6 +12,8 @@
 
 机器或安装器可通过 [`catalog.json`](catalog.json) 获取版本、书籍信息、技能名称、阶段和路径。
 
+GitHub：[`cglt2026opc/opc-skills`](https://github.com/cglt2026opc/opc-skills)
+
 ## 这套 Skills 能帮你做什么
 
 - 看清职业风险、能力结构与 AI 杠杆，找到下一步行动重点。
@@ -212,6 +214,10 @@ skill-name/
 本仓库适合《AI超级个体》的读者，也适合正在探索职业转型、副业验证、个人品牌和一人公司的实践者。核心 Skill 遵循开放的 Agent Skills 目录结构，并通过安装或导出工具适配不同智能体；平台专属字段、工具权限和办公文件能力以各产品实际版本为准。
 
 如果你发现方法与书中表述不一致、示例不够清楚或流程无法执行，欢迎提交 Issue 或 Pull Request，并注明 Skill 名称、使用场景、输入摘要和预期结果。请勿提交客户隐私、合同原文、账号密钥或其他敏感信息。
+
+## 许可证
+
+Agent Skill 指令、脚本和仓库文档采用 [MIT License](LICENSE)。书籍封面以及 `skills/*/assets/` 下的 Word、Excel、图片等配套素材不在 MIT 授权范围内，版权归相应权利人所有，具体边界见许可证文件。
 
 ---
 
