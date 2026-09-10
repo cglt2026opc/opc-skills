@@ -30,7 +30,7 @@ and repository documentation unless stated otherwise.
 The following materials are excluded from the MIT License and remain all
 rights reserved by their respective copyright holders:
 
-- docs/images/book-cover.jpg
+- Files under docs/images/
 - Files under skills/*/assets/
 
 These excluded materials may not be copied, modified, redistributed, or used
