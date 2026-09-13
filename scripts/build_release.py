@@ -163,8 +163,8 @@ def build(output: Path, tag: str | None) -> None:
     version = catalog_version()
     validate_tag(tag, version)
     skills = discover_skills()
-    if len(skills) != 1 or len(discover_modules()) != 21:
-        raise RuntimeError("预期 1 个集成技能和 21 个模块。")
+    if len(skills) != 1 or len(discover_modules()) != 22:
+        raise RuntimeError("预期 1 个集成技能和 22 个模块。")
 
     prepare_output(output)
 

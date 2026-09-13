@@ -30,7 +30,12 @@ jobs:
       - name: Test integrated and standalone distribution
         run: python3 scripts/test_distribution.py
 
+      - name: Test knowledge resource provider
+        run: |
+          python3 scripts/test_resources.py
+          python3 scripts/test_http_resources.py
+
       - name: Smoke-test release packaging
         run: |
           python3 scripts/build_release.py --output /tmp/opc-skills-release
-          test "$(find /tmp/opc-skills-release -maxdepth 1 -type f -name '*.zip' | wc -l)" -eq 25
+          test "$(find /tmp/opc-skills-release -maxdepth 1 -type f -name '*.zip' | wc -l)" -eq 26

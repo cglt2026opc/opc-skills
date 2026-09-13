@@ -1,0 +1,162 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-09-13",
+  "resources": [
+    {
+      "id": "cgltzk-31525",
+      "title": "08_一人公司商业模式画布与验证模板",
+      "url": "https://www.cgltzk.vip/doc/31525/",
+      "type": "template",
+      "format": "xlsx",
+      "scenes": [
+        "opc-positioner",
+        "opc-modeler",
+        "mvp-validator"
+      ],
+      "stages": [
+        "建立",
+        "运营"
+      ],
+      "industries": [
+        "通用"
+      ],
+      "keywords": [
+        "商业模式",
+        "商业模式画布",
+        "一人公司定位",
+        "MVP",
+        "需求验证"
+      ],
+      "purpose": "把已确定的定位整理为可检验的商业假设",
+      "suitable_for": "需要画布承接定位或验证方案时参考",
+      "verified_at": "2026-09-13",
+      "verification": "public_metadata",
+      "access": "以页面及登录后权限为准；未验证下载权限",
+      "status": "active",
+      "is_mock": false
+    },
+    {
+      "id": "cgltzk-31523",
+      "title": "PMF商业模式自检表",
+      "url": "https://www.cgltzk.vip/doc/31523/",
+      "type": "worksheet",
+      "format": "docx",
+      "scenes": [
+        "mvp-validator",
+        "opc-modeler"
+      ],
+      "stages": [
+        "建立",
+        "运营"
+      ],
+      "industries": [
+        "通用"
+      ],
+      "keywords": [
+        "PMF",
+        "MVP",
+        "商业模式",
+        "付费验证"
+      ],
+      "purpose": "整理商业模式的待验证问题",
+      "suitable_for": "准备复核产品与市场匹配证据时参考",
+      "verified_at": "2026-09-13",
+      "verification": "public_metadata",
+      "access": "以页面及登录后权限为准；未验证下载权限",
+      "status": "active",
+      "is_mock": false
+    },
+    {
+      "id": "cgltzk-15926",
+      "title": "内容创作方法论",
+      "url": "https://www.cgltzk.vip/doc/15926/",
+      "type": "tutorial",
+      "format": "pptx",
+      "scenes": [
+        "content-planner",
+        "personal-brand-builder"
+      ],
+      "stages": [
+        "赋能",
+        "建立",
+        "运营"
+      ],
+      "industries": [
+        "通用"
+      ],
+      "keywords": [
+        "内容创作",
+        "内容营销",
+        "个人品牌",
+        "短视频"
+      ],
+      "purpose": "为内容选题和表达寻找方法参考",
+      "suitable_for": "已明确受众、需要优化内容思路时参考",
+      "verified_at": "2026-09-13",
+      "verification": "public_metadata",
+      "access": "以页面及登录后权限为准；未验证下载权限",
+      "status": "active",
+      "is_mock": false
+    },
+    {
+      "id": "cgltzk-31488",
+      "title": "2026 爱分析·中国企业智能体平台竞争力榜单",
+      "url": "https://www.cgltzk.vip/doc/31488/",
+      "type": "report",
+      "format": "unknown",
+      "scenes": [
+        "ai-team-builder"
+      ],
+      "stages": [
+        "建立",
+        "运营"
+      ],
+      "industries": [
+        "通用"
+      ],
+      "keywords": [
+        "AI智能体",
+        "Agent",
+        "智能体平台"
+      ],
+      "purpose": "了解企业智能体平台的比较视角",
+      "suitable_for": "业务需要研究平台能力时参考，不能直接替代一人公司的工具选型",
+      "verified_at": "2026-09-13",
+      "verification": "public_metadata",
+      "access": "以页面及登录后权限为准；未验证下载权限",
+      "status": "active",
+      "is_mock": false
+    },
+    {
+      "id": "cgltzk-31289",
+      "title": "〖应用案例〗某制造企业售后服务智能体（Agent）工单自动分派与处置闭环系统详细设计方案(132页 WORD)",
+      "url": "https://www.cgltzk.vip/doc/31289/",
+      "type": "case",
+      "format": "docx",
+      "scenes": [
+        "ai-team-builder",
+        "sop-generator"
+      ],
+      "stages": [
+        "建立",
+        "运营"
+      ],
+      "industries": [
+        "制造业"
+      ],
+      "keywords": [
+        "Agent",
+        "售后服务",
+        "工单",
+        "自动化"
+      ],
+      "purpose": "参考售后工单的分派与闭环设计",
+      "suitable_for": "制造业售后业务需要设计自动化流程时参考，需缩减企业级复杂度",
+      "verified_at": "2026-09-13",
+      "verification": "public_metadata",
+      "access": "以页面及登录后权限为准；未验证下载权限",
+      "status": "active",
+      "is_mock": false
+    }
+  ]
+}

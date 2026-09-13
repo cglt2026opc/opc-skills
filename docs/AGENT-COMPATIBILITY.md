@@ -2,7 +2,7 @@
 
 本仓库以开放的 `SKILL.md` 目录结构维护同一套 Skills，并按各平台当前公开能力提供原生安装或兼容导出。
 
-默认安装一个 `ai-super-individual` 技能，内含书中 21 个 OPC 实战模块。单独技能包为可选导出；豆包提示词兼容版保留按模块选择。
+默认安装一个 `ai-super-individual` 技能，内含书中 21 个 OPC 实战模块及 knowledge-explorer（共 22 个模块）。单独技能包为可选导出；豆包提示词兼容版保留按模块选择。
 
 ## 支持级别
 
@@ -22,7 +22,7 @@
 
 ## 使用跨平台工具
 
-查看默认集成技能（使用 `list --modules` 查看 21 个模块）：
+查看默认集成技能（使用 `list --modules` 查看 22 个模块）：
 
 ```bash
 python3 scripts/opc_skills.py list
@@ -109,7 +109,7 @@ WorkBuddy 支持从界面上传本地技能包，并兼容 OpenClaw 生态 Skill
 python3 scripts/opc_skills.py package --agent workbuddy
 ```
 
-文件生成到 `dist/workbuddy/ai-super-individual.zip`，内含一个技能入口与 21 个模块。在 WorkBuddy 中打开“专家·技能·连接器”→“技能”→“添加技能”→“上传技能”，选择该集成 ZIP。使用 `--skill mvp-validator` 可另外导出独立包。Release 的 `workbuddy-pack.zip` 需先解压，再上传里面的 `ai-super-individual.zip`。
+文件生成到 `dist/workbuddy/ai-super-individual.zip`，内含一个技能入口与 22 个模块。在 WorkBuddy 中打开“专家·技能·连接器”→“技能”→“添加技能”→“上传技能”，选择该集成 ZIP。使用 `--skill mvp-validator` 可另外导出独立包。Release 的 `workbuddy-pack.zip` 需先解压，再上传里面的 `ai-super-individual.zip`。
 
 发布到 WorkBuddy 技能市场时，还需根据开放平台要求补充 `description_zh`、`description_en`、`version`、`author` 等上架元数据，并完成平台审核；本地上传包与市场发行包不能混为一谈。
 
@@ -131,7 +131,7 @@ python3 scripts/opc_skills.py install --agent qwenwork
 python3 scripts/opc_skills.py package --agent doubao
 ```
 
-生成文件位于 `dist/doubao/`。默认导出 21 份模块提示词，不是一个可按需读取本地文件的集成技能。每个 `.prompt.md` 会包含 Skill 主流程和 Markdown 参考资料，可粘贴到豆包的自定义技能或工作任务说明中。
+生成文件位于 `dist/doubao/`。默认导出 22 份模块提示词，不是一个可按需读取本地文件的集成技能。每个 `.prompt.md` 会包含 Skill 主流程和 Markdown 参考资料，可粘贴到豆包的自定义技能或工作任务说明中。
 
 该方式不会自动携带 Python 脚本、Word/Excel 模板或宿主工具权限。使用包含这些资源的 Skill 时，应把模板作为附件另外上传，并在豆包界面中检查实际可用工具。
 
@@ -154,3 +154,11 @@ python3 scripts/opc_skills.py package --agent doubao
 - [WorkBuddy 技能](https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market)
 - [WorkBuddy 开放平台技能结构](https://open.workbuddy.cn/docs/skill)
 - [千问办公 Skills](https://docs.qwenwork.ai/zh/desktop/skills)
+
+## 知识资源层兼容性
+
+本次保留各平台安装目录、默认入口、copy/link、旧模块名与 --force 语义。集成包携带公共映射、本地索引与 Python 标准库查询脚本；有文件读取但不能执行 Python 时可按 ACCESS.md 人工筛选。Codex / OpenClaw / Hermes 不需要新增依赖或网络认证。
+
+WorkBuddy 默认 ZIP 仍只有一个 SKILL.md。旧模块独立导出时，安装器会复制其知识资源依赖至 references/opc-shared 并调整相对链接；嵌入的知识流程仍叫 WORKFLOW.md。豆包按模块导出，递归内嵌共享说明与 JSON，脚本能力仍需宿主支持，不能声称已自动运行。
+
+仓库测试验证复制、符号链接、ZIP 结构、依赖路径和导出后的离线查询；不等同于在每个平台客户端完成实机验收。现有关键词 API 可通过 --provider http 显式调用；默认保持离线。持久化 Context 尚未实现。

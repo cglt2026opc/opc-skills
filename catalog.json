@@ -2,7 +2,7 @@
   "schema_version": "2.0",
   "name": "opc-skills",
   "display_name": "《AI超级个体》一人公司（OPC）实战 Skills",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "language": "zh-CN",
   "book": {
     "title": "AI超级个体：一人公司（OPC）创富手册",
@@ -144,6 +144,12 @@
       "title": "年度增长计划",
       "stage": "行动与增长",
       "path": "skills/ai-super-individual/references/modules/growth-tracker"
+    },
+    {
+      "name": "knowledge-explorer",
+      "title": "OPC 知识与菜根智库资源导航",
+      "stage": "公共支持",
+      "path": "skills/ai-super-individual/references/modules/knowledge-explorer"
     }
   ]
 }

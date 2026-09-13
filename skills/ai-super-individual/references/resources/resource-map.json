@@ -1,0 +1,155 @@
+{
+  "career-diagnostic": {
+    "keywords": [
+      "职业转型",
+      "AI职业风险"
+    ]
+  },
+  "super-individual-assessment": {
+    "keywords": [
+      "能力自评",
+      "超级个体"
+    ]
+  },
+  "dreyfus-ai-assessor": {
+    "keywords": [
+      "德雷福斯",
+      "技能等级"
+    ]
+  },
+  "case-explorer": {
+    "keywords": [
+      "一人公司案例",
+      "创业案例"
+    ]
+  },
+  "ability-upgrade": {
+    "keywords": [
+      "能力升级",
+      "产品思维"
+    ]
+  },
+  "capability-productizer": {
+    "keywords": [
+      "能力产品化",
+      "付费实验"
+    ]
+  },
+  "opc-positioner": {
+    "keywords": [
+      "一人公司定位",
+      "个人定位",
+      "商业定位",
+      "差异化",
+      "商业模式"
+    ]
+  },
+  "personal-brand-builder": {
+    "keywords": [
+      "个人品牌",
+      "品牌策划"
+    ]
+  },
+  "opc-modeler": {
+    "keywords": [
+      "商业模式",
+      "商业模式画布",
+      "一人公司",
+      "OPC"
+    ]
+  },
+  "kano-prioritizer": {
+    "keywords": [
+      "KANO",
+      "需求分析"
+    ]
+  },
+  "mvp-validator": {
+    "keywords": [
+      "MVP",
+      "PMF",
+      "需求验证",
+      "付费验证",
+      "用户访谈"
+    ]
+  },
+  "value-pricer": {
+    "keywords": [
+      "价值定价",
+      "报价",
+      "客户价值"
+    ]
+  },
+  "opc-startup-readiness": {
+    "keywords": [
+      "创业准备",
+      "创业自检"
+    ]
+  },
+  "side-income-launcher": {
+    "keywords": [
+      "副业",
+      "首单验证"
+    ]
+  },
+  "content-planner": {
+    "keywords": [
+      "内容营销",
+      "公众号",
+      "短视频",
+      "获客",
+      "个人品牌",
+      "GEO",
+      "内容创作"
+    ]
+  },
+  "sop-generator": {
+    "keywords": [
+      "SOP",
+      "标准流程"
+    ]
+  },
+  "ai-team-builder": {
+    "keywords": [
+      "AI智能体",
+      "Agent",
+      "自动化",
+      "虚拟团队",
+      "工作流"
+    ]
+  },
+  "opc-prompt-workbench": {
+    "keywords": [
+      "提示词",
+      "AI教程"
+    ]
+  },
+  "resource-explorer": {
+    "keywords": [
+      "工具教程",
+      "软件使用"
+    ]
+  },
+  "super-individual-90day": {
+    "keywords": [
+      "90天计划",
+      "行动计划",
+      "复盘"
+    ]
+  },
+  "growth-tracker": {
+    "keywords": [
+      "年度增长",
+      "收入结构"
+    ]
+  },
+  "knowledge-explorer": {
+    "keywords": [
+      "知识资源",
+      "模板",
+      "报告",
+      "案例",
+      "教程"
+    ]
+  }
+}

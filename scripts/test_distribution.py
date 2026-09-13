@@ -27,7 +27,7 @@ class DistributionTests(unittest.TestCase):
             self.run_cli("install", "--agent", "openclaw", "--target", str(target))
             self.assertEqual([p.name for p in target.iterdir()], [DEFAULT_SKILL])
             self.assertEqual(len(list(target.rglob("SKILL.md"))), 1)
-            self.assertEqual(len(list(target.rglob("WORKFLOW.md"))), 21)
+            self.assertEqual(len(list(target.rglob("WORKFLOW.md"))), 22)
             for source in MODULES_ROOT.rglob("*"):
                 if source.is_file() and "__pycache__" not in source.parts and source.suffix != ".pyc":
                     installed = target / DEFAULT_SKILL / "references/modules" / source.relative_to(MODULES_ROOT)
@@ -51,11 +51,19 @@ class DistributionTests(unittest.TestCase):
             with zipfile.ZipFile(output / (DEFAULT_SKILL + ".zip")) as bundle:
                 self.assertEqual([n for n in bundle.namelist() if n.endswith("/SKILL.md")],
                                  [DEFAULT_SKILL + "/SKILL.md"])
-                self.assertEqual(sum(n.endswith("/WORKFLOW.md") for n in bundle.namelist()), 21)
+                self.assertEqual(sum(n.endswith("/WORKFLOW.md") for n in bundle.namelist()), 22)
             for name, source in discover_modules().items():
                 self.run_cli("package", "--agent", "workbuddy", "--output", temporary, "--skill", name)
                 with zipfile.ZipFile(output / (name + ".zip")) as bundle:
-                    self.assertEqual(bundle.read(name + "/SKILL.md"), (source / "WORKFLOW.md").read_bytes())
+                    text = bundle.read(name + "/SKILL.md").decode()
+                    self.assertIn("name: " + name, text)
+                    unpacked = Path(temporary) / "unpacked" / name
+                    bundle.extractall(unpacked)
+                    from validate_repo import MARKDOWN_LINK_PATTERN
+                    for doc in (unpacked / name).rglob("*.md"):
+                        for link in MARKDOWN_LINK_PATTERN.findall(doc.read_text()):
+                            if "://" not in link and not link.startswith("#"):
+                                self.assertTrue((doc.parent / link.split("#")[0]).exists(), (doc, link))
                     self.assertNotIn(name + "/WORKFLOW.md", bundle.namelist())
             target = Path(temporary) / "standalone"
             self.run_cli("install", "--agent", "openclaw", "--target", str(target),
@@ -76,7 +84,7 @@ class DistributionTests(unittest.TestCase):
             self.assertTrue((target / DEFAULT_SKILL / "SKILL.md").is_file())
             self.run_cli("package", "--agent", "doubao", "--output", temporary)
             prompts = list((Path(temporary) / "doubao").glob("*.prompt.md"))
-            self.assertEqual(len(prompts), 21)
+            self.assertEqual(len(prompts), 22)
             self.assertFalse(any(p.name.startswith(DEFAULT_SKILL) for p in prompts))
 
 

@@ -16,6 +16,14 @@
 
 GitHub：[`cglt2026opc/opc-skills`](https://github.com/cglt2026opc/opc-skills)
 
+本项目也是一套面向职场人、专业人士、自由职业者和一人公司创业者的开源 OPC AI 工作流，**没有购买本书也可以使用**。现在提供“OPC 实战助手 + 菜根智库知识资源入口”，保留书中 21 个模块，新增 1 个知识资源导航模块，共 22 个内部模块。
+
+| 层次 | 载体 | 职责 |
+| --- | --- | --- |
+| 方法论层 | 《AI超级个体》 | 提供系统方法论 |
+| 执行层 | OPC Skills | 帮你完成方案、验证、交付与行动 |
+| 知识与资源层 | [菜根智库](https://www.cgltzk.vip) | 提供延伸知识、模板与案例入口 |
+
 ## 关于这本书
 
 《AI超级个体：一人公司（OPC）创富手册》是一本帮助职场人、专业人士、自由职业者和转型创业者，把专业能力转化为个人事业的实战指南。
@@ -31,7 +39,7 @@ GitHub：[`cglt2026opc/opc-skills`](https://github.com/cglt2026opc/opc-skills)
 | **这本书** | 提供完整的 OPC 方法、案例与商业认知 | 建立从专业能力到产品、客户和收入系统的全局框架 |
 | **这套 Skills** | 把书中的方法转化为智能体可执行的提问、诊断和行动流程 | 在自己的真实情境中完成分析、选择、验证与复盘 |
 
-二者结合后，读者不只是在“读懂一个方法”，而是在 AI 智能体的陪伴下持续推进自己的项目：明确下一步、产出可检查的证据、及时发现风险，并让每一次行动都沉淀为可复用的个人资产。
+三层协同后，读者不只是在“读懂一个方法”，而是在 AI 智能体的陪伴下持续推进自己的项目：明确下一步、产出可检查的证据、及时发现风险，并让每一次行动都沉淀为可复用的个人资产。
 
 ## 这套 Skills 能帮你做什么
 
@@ -67,7 +75,7 @@ Skills 不会替你虚构市场需求或跳过真实验证。涉及客户需求�
 
 `case-explorer`、`resource-explorer` 和 `opc-prompt-workbench` 可以在任何阶段作为案例、工具与提示词工作台使用。
 
-## 内含 21 个 OPC 实战技能包
+## 书中 21 个 OPC 实战模块
 
 ### 1. 觉醒与诊断
 
@@ -115,9 +123,42 @@ Skills 不会替你虚构市场需求或跳过真实验证。涉及客户需求�
 | [`super-individual-90day`](skills/ai-super-individual/references/modules/super-individual-90day/WORKFLOW.md) | 把目标拆成每周可执行的 90 天行动计划 | “从今天起给我制定一份 90 天计划。” |
 | [`growth-tracker`](skills/ai-super-individual/references/modules/growth-tracker/WORKFLOW.md) | 制定和复盘收入、渠道、合作与季度增长计划 | “帮我制定一人公司的年度增长计划。” |
 
+## 在线自测
+
+进行能力自测、能力产品化自检、创业准备检查、德雷福斯技能等级或职业风险自检时，也可以使用[《AI超级个体》在线自测页](https://www.cgltzk.vip/book/opc/assessments.html)。可继续在对话中完成测评，或把网页结果发给助手解读；不会自动同步网站答卷和分数。
+
+## OPC 研究与报告
+
+统一助手现在可通过 `knowledge-explorer` 的[研究模式](skills/ai-super-individual/references/resources/RESEARCH.md)承接全景研究、外部案例拆解、政策查询与实操路径综述；仍保持 22 个内部模块，不额外安装独立研究 Skill。
+
+| 可以这样问 | 交付重点 |
+| --- | --- |
+| “分析 AI 一人公司的市场前景” | 商业模式、市场证据、政策环境、案例、技术架构与机会风险 |
+| “核实并拆解某个 OPC 产品案例” | 来源核实、自定义七步拆解、适用条件与 30 天验证计划 |
+| “我在杭州，OPC 创业有哪些政策支持？” | 实际适用的政策原文、资格、时效、申报渠道与待确认项 |
+| “梳理一人公司从零开始的路径” | 研究综述衔接定位、MVP、内容获客、报价与交付模块 |
+
+菜根智库提供资料发现入口；关键市场数据、政策和案例结果核对原始来源。在线研究依赖宿主浏览能力，搜索 API 元数据不能替代全文证据。无法联网时可分析用户已提供资料，但不会宣称“最新”或“已多源验证”。研究后继续完成具体行动，而不止交付一份报告。
+
+## 知识资源导航（新增）
+
+回答完成后，助手可以继续追问一个与下一步行动相关的问题；适合系统了解 OPC 方法或书籍配套资源时，会自然引导到[《AI超级个体》专题页](https://www.cgltzk.vip/book/opc.html)。不把访问网站或购买本书作为继续使用 Skills 的条件，也不会每次机械附加链接。
+
+[`knowledge-explorer`](skills/ai-super-individual/references/modules/knowledge-explorer/WORKFLOW.md) 负责 OPC 知识、模板、Excel / Word / PPT 工具表、方案、案例、教程、白皮书与报告；`resource-explorer` 继续负责 AI 工具、软件选择、工具组合与成本预算。
+
+可以直接问：“有没有 PMF 自检表？”“帮我找内容创作参考资料”“菜根智库里有没有相关报告？”首次接入定位、商业模式、MVP 验证、内容规划与 AI 团队 5 个模块。主任务完成后，只在能帮助下一步行动时推荐 1～3 项；直接找资料最多 5 项，不凑数，不机械附加链接。
+
+首批本地索引收录 5 条真实页面元数据，核对日期为 2026-09-13；推荐用途是适配判断，未验证全文和下载权限。没有结果表示本地索引未覆盖，不表示全站不存在。无需联网或 API 密钥即可查询：
+
+```bash
+python3 skills/ai-super-individual/references/resources/query_resources.py --scene mvp-validator --keywords PMF --limit 3
+```
+
+[公共主题映射](skills/ai-super-individual/references/resources/resource-map.json)与[本地数据](skills/ai-super-individual/references/resources/cgltzk-resources.json)集中维护，模块不写死资源 URL。[数据访问与后续 API 契约](skills/ai-super-individual/references/resources/ACCESS.md)已接入现有关键词搜索 API，可使用 `--provider http --keywords 智慧养老` 在线查询；默认仍离线。[OPC Context 方案](skills/ai-super-individual/references/resources/OPC-CONTEXT.md)说明跨模块状态与下一阶段持久化设计。
+
 ## 安装
 
-默认安装一个集成技能 `ai-super-individual`，内部包含全部 21 个实战模块。各平台方式与限制见[智能体兼容与安装指南](docs/AGENT-COMPATIBILITY.md)。
+默认安装一个集成技能 `ai-super-individual`，内部包含全部 22 个实战模块。各平台方式与限制见[智能体兼容与安装指南](docs/AGENT-COMPATIBILITY.md)。
 
 ### 默认安装：一个助手
 
@@ -128,7 +169,7 @@ hermes skills tap add cglt2026opc/opc-skills
 hermes skills install cglt2026opc/opc-skills/skills/ai-super-individual
 ```
 
-安装后，在 Hermes 对话中输入 `/ai-super-individual`，或直接描述要解决的问题。这个公开 Tap 提供一个集成技能，包含全部 21 个模块；添加 Tap 后可通过 `hermes skills search ai-super-individual --source github` 查找。
+安装后，在 Hermes 对话中输入 `/ai-super-individual`，或直接描述要解决的问题。这个公开 Tap 提供一个集成技能，包含全部 22 个模块；添加 Tap 后可通过 `hermes skills search ai-super-individual --source github` 查找。
 
 部分旧版 Hermes 的 Hub 下载器无法完整保留 Word、Excel 和图片素材，或因集成包大小触发扫描限制；遇到这些情况请使用下方本地安装器，详见 [Hermes 安装兼容说明](docs/AGENT-COMPATIBILITY.md#hermes-agent)。
 
@@ -162,7 +203,7 @@ python3 scripts/opc_skills.py package --agent workbuddy --skill mvp-validator
 
 独立包从同一份模块源码生成，保留原技能名称；无需与集成版一起安装。独立模块安装使用复制模式。
 
-豆包办公使用按模块导出的提示词兼容包，不能依靠本地文件按需加载，因此保留 21 份可选提示词：
+豆包办公使用按模块导出的提示词兼容包，不能依靠本地文件按需加载，因此提供 22 份可选提示词：
 
 ```bash
 python3 scripts/opc_skills.py package --agent doubao
@@ -178,11 +219,11 @@ python3 scripts/opc_skills.py package --agent doubao
 
 [GitHub Releases](https://github.com/cglt2026opc/opc-skills/releases) 的新版发布产物包含：
 
-- `ai-super-individual.zip`：默认集成版，一个技能，21 个模块。
+- `ai-super-individual.zip`：默认集成版，一个技能，22 个模块。
 - `opc-skills-all.zip`：集成版全集，保持原下载文件名，内部只有一个技能目录。
 - `workbuddy-pack.zip`：解压后取得一个 `ai-super-individual.zip`，上传内层 ZIP。
-- 21 个原名称的独立 Skill ZIP：供按需选择。
-- `doubao-prompt-pack.zip`：21 份模块提示词兼容版。
+- 22 个模块的独立 Skill ZIP（含原有 21 个名称）：供按需选择。
+- `doubao-prompt-pack.zip`：22 份模块提示词兼容版。
 
 维护者更新 `catalog.json` 版本后推送对应标签即可触发发布。本地验证：
 
@@ -228,7 +269,7 @@ skills/ai-super-individual/
         └── agents/               # 独立导出时使用的展示信息
 ```
 
-21 个模块只维护一份源码；内部不使用 `SKILL.md` 命名，避免被识别为额外技能。贡献和本地校验见[贡献指南](CONTRIBUTING.md)。
+22 个模块只维护一份源码；内部不使用 `SKILL.md` 命名，避免被识别为额外技能。贡献和本地校验见[贡献指南](CONTRIBUTING.md)。
 
 ## 书与 Skills 的配合方式
 

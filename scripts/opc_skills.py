@@ -63,6 +63,19 @@ def selected_skills(names: list[str]):
                 target = Path(temporary) / name
                 shutil.copytree(modules[name], target, ignore=shutil.ignore_patterns("__pycache__", "*.pyc", ".DS_Store"))
                 (target / "WORKFLOW.md").rename(target / "SKILL.md")
+                # Preserve shared-resource dependencies in legacy standalone exports.
+                entry = target / "SKILL.md"
+                text = entry.read_text(encoding="utf-8")
+                if "../../resources/" in text or "../knowledge-explorer/WORKFLOW.md" in text:
+                    shared = target / "references/opc-shared"
+                    shutil.copytree(MODULES_ROOT.parent / "resources", shared / "resources",
+                                    ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
+                    text = text.replace("../../resources/", "references/opc-shared/resources/")
+                    if "../knowledge-explorer/WORKFLOW.md" in text:
+                        shutil.copytree(modules["knowledge-explorer"], shared / "modules/knowledge-explorer")
+                        text = text.replace("../knowledge-explorer/WORKFLOW.md",
+                                            "references/opc-shared/modules/knowledge-explorer/WORKFLOW.md")
+                    entry.write_text(text, encoding="utf-8")
                 selected[name] = target
         yield selected
 
@@ -180,7 +193,7 @@ def package_doubao(skills: dict[str, Path], output: Path) -> None:
         reference_files = (
             sorted(
                 item
-                for item in (source / "references").iterdir()
+                for item in (source / "references").rglob("*")
                 if item.is_file() and item.suffix.lower() in text_suffixes
             )
             if (source / "references").is_dir()
@@ -192,7 +205,7 @@ def package_doubao(skills: dict[str, Path], output: Path) -> None:
                 sections.extend(
                     [
                         "",
-                        f"### {reference.name}",
+                        f"### {reference.relative_to(source)}",
                         "",
                         reference.read_text(encoding="utf-8").strip(),
                     ]
@@ -228,7 +241,7 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     list_parser = subparsers.add_parser("list", help="列出默认安装的集成技能。")
-    list_parser.add_argument("--modules", action="store_true", help="列出可选的 21 个独立模块。")
+    list_parser.add_argument("--modules", action="store_true", help="列出可选的内部模块。")
 
     install_parser = subparsers.add_parser(
         "install", help="安装到支持本地 SKILL.md 的智能体。"

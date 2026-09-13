@@ -13,11 +13,11 @@
 
 唯一可安装入口位于 `skills/ai-super-individual/SKILL.md`，只维护路由、共用约束和模块选择边界。
 
-21 个模块位于 `skills/ai-super-individual/references/modules/<原技能名>/`，流程文件为 `WORKFLOW.md`，保留原 frontmatter，以便导出独立包。方法修改只改模块源码，不维护第二套副本。
+22 个模块（原有 21 个 + knowledge-explorer）位于 `skills/ai-super-individual/references/modules/<原技能名>/`，流程文件为 `WORKFLOW.md`，保留原 frontmatter，以便导出独立包。方法修改只改模块源码，不维护第二套副本。
 
 模块的 `references/`、`scripts/`、`assets/` 和独立导出使用的 `agents/` 保持相对位置。相对路径以模块目录为基准。不要在模块目录创建 `SKILL.md`，否则宿主可能识别出额外技能。
 
-`catalog.json` 的 `skills` 记录唯一安装入口，`modules` 记录 21 个模块；变更路径时同步更新目录与入口链接。
+`catalog.json` 的 `skills` 记录唯一安装入口，`modules` 记录 22 个模块（原有 21 个 + knowledge-explorer）；变更路径时同步更新目录与入口链接。
 
 ## 编写要求
 
@@ -37,6 +37,8 @@ python3 scripts/validate_repo.py
 python3 scripts/opc_skills.py list
 python3 scripts/opc_skills.py list --modules
 python3 scripts/test_distribution.py
+python3 scripts/test_resources.py
+python3 scripts/test_http_resources.py
 python3 scripts/build_release.py
 ```
 

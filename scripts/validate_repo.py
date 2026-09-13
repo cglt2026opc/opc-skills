@@ -106,8 +106,8 @@ def main() -> int:
     if catalog.get("default_skill") != DEFAULT_SKILL or len(skill_dirs) != 1:
         print("错误：必须只有一个默认集成技能。", file=sys.stderr)
         return 1
-    if len(modules) != 21 or {item["name"] for item in catalog.get("modules", [])} != set(modules):
-        print("错误：catalog 模块与 21 个内部模块不一致。", file=sys.stderr)
+    if len(modules) != 22 or {item["name"] for item in catalog.get("modules", [])} != set(modules):
+        print("错误：catalog 模块与 22 个内部模块不一致。", file=sys.stderr)
         return 1
     for item in [*catalog["skills"], *catalog["modules"]]:
         expected = SKILLS_ROOT / item["name"] if item["name"] == DEFAULT_SKILL else modules[item["name"]]
@@ -136,7 +136,7 @@ def main() -> int:
     if failures:
         print(f"校验失败：{failures} 个问题。", file=sys.stderr)
         return 1
-    print(f"校验通过：{len(skill_dirs)} 个集成 Skill，21 个模块。")
+    print(f"校验通过：{len(skill_dirs)} 个集成 Skill，22 个模块。")
     return 0
 
 
