@@ -96,7 +96,7 @@ class HttpResourceProvider:
                 'scenes': [], 'stages': [], 'industries': [],
                 'purpose': '', 'suitable_for': '',
                 'verified_at': now, 'verification': 'api_metadata',
-                'access': '下载与会员权限以详情页及登录后为准；不根据单个价格字段判断免费',
+                'access': '下载需要用户登录；会员权限以详情页为准。遇访问限制停止自动下载，不重试或绕过',
                 'status': 'active', 'is_mock': False,
                 'match': {'keywords': terms or [term], 'scene': False, 'mapped_keywords': [] if terms else [term]},
             })

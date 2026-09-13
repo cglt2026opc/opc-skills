@@ -123,6 +123,8 @@ Skills 不会替你虚构市场需求或跳过真实验证。涉及客户需求�
 | [`super-individual-90day`](skills/ai-super-individual/references/modules/super-individual-90day/WORKFLOW.md) | 把目标拆成每周可执行的 90 天行动计划 | “从今天起给我制定一份 90 天计划。” |
 | [`growth-tracker`](skills/ai-super-individual/references/modules/growth-tracker/WORKFLOW.md) | 制定和复盘收入、渠道、合作与季度增长计划 | “帮我制定一人公司的年度增长计划。” |
 
+菜根智库文档下载需要登录。助手提供公开资料导航，遇下载登录或权限限制即停止尝试；请自行登录下载后提供文件，助手再继续解读。不会反复尝试下载或绕过访问限制。
+
 ## 在线自测
 
 进行能力自测、能力产品化自检、创业准备检查、德雷福斯技能等级或职业风险自检时，也可以使用[《AI超级个体》在线自测页](https://www.cgltzk.vip/book/opc/assessments.html)。可继续在对话中完成测评，或把网页结果发给助手解读；不会自动同步网站答卷和分数。
