@@ -2,13 +2,15 @@
   "schema_version": "2.0",
   "name": "opc-skills",
   "display_name": "《AI超级个体》一人公司（OPC）实战 Skills",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "language": "zh-CN",
   "book": {
     "title": "AI超级个体：一人公司（OPC）创富手册",
     "author": "菜根老谭",
     "publisher": "机械工业出版社",
-    "isbn": "978-7-111-81776-5"
+    "isbn": "978-7-111-81776-5",
+    "publication_status": "published",
+    "topic_url": "https://www.cgltzk.vip/book/opc.html"
   },
   "skills": [
     {
