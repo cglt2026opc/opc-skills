@@ -1,0 +1,669 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "title": "2026中国OPC发展政策研究报告",
+    "publisher": "OPC圈",
+    "publisher_domain": "opcquan.com",
+    "publication_month": "2026-05",
+    "data_cutoff": "2026-05-11",
+    "pdf_page_count": 72,
+    "sha256": "aa2d9966dd69aa5a565af54402633ca82da3b5946b6d690e7d82877875e12db2",
+    "extracted_at": "2026-10-09",
+    "source_type": "user_provided_third_party_report",
+    "official_verification_performed": false,
+    "download_page_url": "https://www.cgltzk.vip/doc/31526/",
+    "download_page_provenance": "user_provided",
+    "download_page_access_verified": false
+  },
+  "scope": "23个代表地区的人工提炼检索线索；不是109条政策全库，未命中不代表无政策。所有金额均为报告历史记述。",
+  "quality_notes": [
+    "29省覆盖与正文及附录不一致",
+    "附录含范围合并及109项占位，不作为独立政策计数",
+    "宁波金额与训力券唯一性存在内部冲突",
+    "全文获取标记不代表正式发布或生效"
+  ],
+  "records": [
+    {
+      "id": "shenzhen",
+      "province": "广东",
+      "region": "深圳",
+      "strategy": "生态先导",
+      "business_tags": [
+        "AI开发",
+        "模型训练",
+        "融资"
+      ],
+      "source_pages": [
+        20,
+        23,
+        30,
+        71
+      ],
+      "policy_search_clue": "OPC创业生态引领地行动计划；深工信〔2026〕2号",
+      "report_date_text": "2026-01-14",
+      "mechanism": "多券与社区分阶段服务",
+      "caution": "核对市级与区级、OPC专项与通用券资格",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": [
+        {
+          "source_page": 23,
+          "tool": "训力/模型/语料券",
+          "report_claim": "分别最高1000/200/200万元；资格与叠加未核实",
+          "official_verified": false
+        }
+      ]
+    },
+    {
+      "id": "wuhan",
+      "province": "湖北",
+      "region": "武汉",
+      "strategy": "生态先导",
+      "business_tags": [
+        "AI开发",
+        "社区服务",
+        "数据"
+      ],
+      "source_pages": [
+        20,
+        23,
+        31,
+        39,
+        49,
+        71
+      ],
+      "policy_search_clue": "支持人工智能OPC创新发展若干措施及社区建设指引；武政规〔2026〕4号",
+      "report_date_text": "2026-02-13",
+      "mechanism": "社区认定、评估和免费公共服务包",
+      "caution": "社区建设奖励与入驻企业支持分开；报告记生效2026-03-18、有效至2028-12-31，未核实",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": [
+        {
+          "source_page": 20,
+          "tool": "算力费用支持",
+          "report_claim": "最高20万元/年，比例50%，另记免费2000卡时/年",
+          "official_verified": false
+        },
+        {
+          "source_page": 39,
+          "tool": "社区运营主体支持",
+          "report_claim": "最高500万元；不能转作单个创业者补贴",
+          "official_verified": false
+        }
+      ]
+    },
+    {
+      "id": "chengdu",
+      "province": "四川",
+      "region": "成都",
+      "strategy": "生态先导",
+      "business_tags": [
+        "AI开发",
+        "API调用",
+        "人才认定"
+      ],
+      "source_pages": [
+        23,
+        31,
+        71
+      ],
+      "policy_search_clue": "打造人工智能OPC创新发展新高地行动计划（2026—2027年）",
+      "report_date_text": "2026-03",
+      "mechanism": "费用支持与人才成果认定",
+      "caution": "查自主认定细则、集中采购与费用核销",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": [
+        {
+          "source_page": 23,
+          "tool": "算力购买",
+          "report_claim": "不超过购买费用60%，最高500万元/年",
+          "official_verified": false
+        },
+        {
+          "source_page": 23,
+          "tool": "模型/Token费用",
+          "report_claim": "不超过对应费用30%，最高100万元/年",
+          "official_verified": false
+        }
+      ]
+    },
+    {
+      "id": "dongguan",
+      "province": "广东",
+      "region": "东莞",
+      "strategy": "供应链赋能",
+      "business_tags": [
+        "硬件",
+        "打样",
+        "小批量制造"
+      ],
+      "source_pages": [
+        24,
+        33,
+        40,
+        70,
+        71
+      ],
+      "policy_search_clue": "打造OPC成果产业化智造服务基地若干措施",
+      "report_date_text": "2026-03-23",
+      "mechanism": "创意验证、共享实验室、快反制造",
+      "caution": "正文标征求意见稿；正式稿与平台可用性待核实",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": [
+        {
+          "source_page": 24,
+          "tool": "首次打样（草案）",
+          "report_claim": "费用100%，单项最高5万元",
+          "official_verified": false
+        },
+        {
+          "source_page": 24,
+          "tool": "共享验证实验室（草案）",
+          "report_claim": "费用80%，单项目年度最高10万元",
+          "official_verified": false
+        },
+        {
+          "source_page": 33,
+          "tool": "首单快反制造（草案）",
+          "report_claim": "100—10000件，费用20%，单项最高80万元",
+          "official_verified": false
+        }
+      ]
+    },
+    {
+      "id": "hefei",
+      "province": "安徽",
+      "region": "合肥",
+      "strategy": "分区协同",
+      "business_tags": [
+        "工业AI",
+        "场景订单",
+        "内容创作"
+      ],
+      "source_pages": [
+        28,
+        43,
+        44,
+        69,
+        71
+      ],
+      "policy_search_clue": "高新区创业生态计划；包河区政策；庐阳三年计划；市营商环境8.0",
+      "report_date_text": "2026-03至2026-05",
+      "mechanism": "产业孵化、社区运营与微场景分区协同",
+      "caution": "高新区与包河额度归属需分开；清单发布不保证采购",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    },
+    {
+      "id": "hangzhou",
+      "province": "浙江",
+      "region": "杭州",
+      "strategy": "待按区核实",
+      "business_tags": [
+        "AI开发",
+        "内容业务",
+        "融资"
+      ],
+      "source_pages": [
+        15,
+        69,
+        71
+      ],
+      "policy_search_clue": "市级AI+及各区OPC措施；上城措施；萧山OpenClaw&OPC-STC措施",
+      "report_date_text": "2026-03/04",
+      "mechanism": "上城产业基金与萧山工具生态等区级方向",
+      "caution": "不同区资源不能汇总为用户可享权益",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    },
+    {
+      "id": "ningbo",
+      "province": "浙江",
+      "region": "宁波",
+      "strategy": "待核实",
+      "business_tags": [
+        "创业保障",
+        "AI开发"
+      ],
+      "source_pages": [
+        20,
+        27,
+        69,
+        71
+      ],
+      "policy_search_clue": "OPC创新创业若干意见",
+      "report_date_text": "2026-04",
+      "mechanism": "创业保险与监管探索",
+      "caution": "第20页200万与第71页800万冲突，停止额度比较",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": [
+        {
+          "source_page": 20,
+          "tool": "训力券",
+          "report_claim": "200万元；与第71页800万元口径冲突",
+          "official_verified": false
+        },
+        {
+          "source_page": 71,
+          "tool": "算力支持",
+          "report_claim": "800万元；与第20页200万元口径冲突",
+          "official_verified": false
+        }
+      ]
+    },
+    {
+      "id": "guangzhou",
+      "province": "广东",
+      "region": "广州",
+      "strategy": "待按区核实",
+      "business_tags": [
+        "API调用",
+        "人才住房",
+        "创业服务"
+      ],
+      "source_pages": [
+        19,
+        70,
+        71
+      ],
+      "policy_search_clue": "AI产业实施方案与番禺/海珠OPC措施",
+      "report_date_text": "2026-03",
+      "mechanism": "区级服务、空间与人才条件",
+      "caution": "市级、番禺与海珠分别查状态及申请主体",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    },
+    {
+      "id": "suzhou",
+      "province": "江苏",
+      "region": "苏州",
+      "strategy": "供应链赋能",
+      "business_tags": [
+        "工业AI",
+        "跨境电商",
+        "园区服务"
+      ],
+      "source_pages": [
+        34,
+        68,
+        69,
+        71
+      ],
+      "policy_search_clue": "人工智能OPC集聚区方案及园区、昆山、太仓措施",
+      "report_date_text": "2025-12至2026-03",
+      "mechanism": "园区服务、产业供应链、中德合作",
+      "caution": "园区、昆山、太仓资源与资格分别核验",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    },
+    {
+      "id": "yongzhou",
+      "province": "湖南",
+      "region": "永州",
+      "strategy": "制度借势",
+      "business_tags": [
+        "开源工具",
+        "算力入股"
+      ],
+      "source_pages": [
+        26,
+        35,
+        42,
+        43,
+        70,
+        71
+      ],
+      "policy_search_clue": "支持OpenClaw等开源社区项目与OPC社区融合发展十条措施",
+      "report_date_text": "2026-04-18",
+      "mechanism": "以算力资源作价入股及后续孵化",
+      "caution": "报告无公开落地案例；估值、国资程序与退出未明",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": [
+        {
+          "source_page": 42,
+          "tool": "算力入股",
+          "report_claim": "按市场价值评估，比例原则上不超过20%；非现金补贴",
+          "official_verified": false
+        }
+      ]
+    },
+    {
+      "id": "urumqi",
+      "province": "新疆",
+      "region": "乌鲁木齐",
+      "strategy": "制度借势",
+      "business_tags": [
+        "住所登记",
+        "开源工具"
+      ],
+      "source_pages": [
+        25,
+        34,
+        71
+      ],
+      "policy_search_clue": "高新区支持OPC与OpenClaw十条；经开区十项措施",
+      "report_date_text": "2026-03",
+      "mechanism": "自贸区虚拟地址与帮办",
+      "caution": "高新区正文标2026-03-13征求意见稿；经开区另查",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    },
+    {
+      "id": "jiaozhou",
+      "province": "山东",
+      "region": "胶州",
+      "strategy": "制度借势",
+      "business_tags": [
+        "远程交付",
+        "跨境业务",
+        "场景订单"
+      ],
+      "source_pages": [
+        41,
+        70,
+        71
+      ],
+      "policy_search_clue": "OPC创新发展方案及第二批政策",
+      "report_date_text": "2026-03/05",
+      "mechanism": "数字游民与两批场景、服务迭代",
+      "caution": "核验实质经营、国际通道与当前服务，场景不是成交",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    },
+    {
+      "id": "jinan",
+      "province": "山东",
+      "region": "济南",
+      "strategy": "待核实",
+      "business_tags": [
+        "场景订单",
+        "人才支持",
+        "融资"
+      ],
+      "source_pages": [
+        21,
+        27,
+        28,
+        70,
+        71
+      ],
+      "policy_search_clue": "数智生态OPC社区十大举措",
+      "report_date_text": "2026-02",
+      "mechanism": "社区、细分场景与产业基金",
+      "caution": "基金规模不是补贴；人才类别与社区入驻分开核验",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    },
+    {
+      "id": "beijing-yizhuang",
+      "province": "北京",
+      "region": "北京亦庄",
+      "strategy": "生态先导",
+      "business_tags": [
+        "先进制造",
+        "场景订单",
+        "创业服务"
+      ],
+      "source_pages": [
+        32,
+        68,
+        71
+      ],
+      "policy_search_clue": "模数世界OPC社区启航计划与5A要素支撑",
+      "report_date_text": "2026-01/04",
+      "mechanism": "产业网络与首批订单对接线索",
+      "caution": "附录日期与正文框架日期不同；核实具体采购机制",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    },
+    {
+      "id": "haikou",
+      "province": "海南",
+      "region": "海口",
+      "strategy": "制度借势",
+      "business_tags": [
+        "开源工具",
+        "跨境业务"
+      ],
+      "source_pages": [
+        35,
+        70,
+        71
+      ],
+      "policy_search_clue": "海口高新区龙虾六条；龙华区特色OPC社区试点措施",
+      "report_date_text": "2026-03",
+      "mechanism": "自贸港条件与OPC工具/空间服务",
+      "caution": "高新区正文标2026-03-18征求意见稿；税收不普遍适用",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    },
+    {
+      "id": "chongqing-liangjiang",
+      "province": "重庆",
+      "region": "重庆两江新区",
+      "strategy": "待核实",
+      "business_tags": [
+        "API调用",
+        "办公空间"
+      ],
+      "source_pages": [
+        19,
+        20,
+        71
+      ],
+      "policy_search_clue": "OPC社区支持十条",
+      "report_date_text": "2026-03",
+      "mechanism": "词元/模型费用与一免两减半空间",
+      "caution": "指定供应商、最低消费与租金期后费用待核实",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": [
+        {
+          "source_page": 20,
+          "tool": "词元/模型券",
+          "report_claim": "费用50%，最高3万元/年",
+          "official_verified": false
+        }
+      ]
+    },
+    {
+      "id": "chongqing-yuzhong",
+      "province": "重庆",
+      "region": "重庆渝中区",
+      "strategy": "待核实",
+      "business_tags": [
+        "API调用",
+        "数据",
+        "人才住房"
+      ],
+      "source_pages": [
+        23,
+        71
+      ],
+      "policy_search_clue": "OPC十百千万工程",
+      "report_date_text": "2026-04",
+      "mechanism": "算力、模型、词元、语料与公寓券组合",
+      "caution": "五券合一不代表可无条件叠加或直接领现金",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    },
+    {
+      "id": "changsha",
+      "province": "湖南",
+      "region": "长沙",
+      "strategy": "赛道与工具支持",
+      "business_tags": [
+        "AIGC",
+        "开源工具",
+        "融资"
+      ],
+      "source_pages": [
+        20,
+        27,
+        56,
+        70,
+        71
+      ],
+      "policy_search_clue": "马栏山0731马力全开；望城措施；经开区养虾十条",
+      "report_date_text": "2026-03",
+      "mechanism": "内容赛道与开源工具支持",
+      "caution": "马栏山、望城和经开区是不同归口；部署不等于持续运营",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    },
+    {
+      "id": "nanning",
+      "province": "广西",
+      "region": "南宁",
+      "strategy": "制度借势",
+      "business_tags": [
+        "东盟出海",
+        "创业服务"
+      ],
+      "source_pages": [
+        35,
+        70,
+        71
+      ],
+      "policy_search_clue": "服务支持OPC创业发展十条；南人社发〔2026〕8号；五象新区措施",
+      "report_date_text": "2026-04",
+      "mechanism": "东盟跨境与本地服务",
+      "caution": "五象全文在附录标摘要；原文与跨境适用条件待核实",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    },
+    {
+      "id": "quanzhou-fengze",
+      "province": "福建",
+      "region": "泉州丰泽区",
+      "strategy": "待核实",
+      "business_tags": [
+        "场景订单",
+        "融资",
+        "住所登记"
+      ],
+      "source_pages": [
+        27,
+        28,
+        69,
+        72
+      ],
+      "policy_search_clue": "OPC创业首选区行动计划",
+      "report_date_text": "2026-03",
+      "mechanism": "十百千万规划与场景、服务线索",
+      "caution": "规划场景数量不等于已开放数量；基金不等于可领取支持",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    },
+    {
+      "id": "zhuhai-xiangzhou",
+      "province": "广东",
+      "region": "珠海香洲区",
+      "strategy": "待核实",
+      "business_tags": [
+        "港澳青年",
+        "场景订单",
+        "办公空间"
+      ],
+      "source_pages": [
+        19,
+        70,
+        71,
+        72
+      ],
+      "policy_search_clue": "培育OPC产业新模式计划",
+      "report_date_text": "2026-03",
+      "mechanism": "跨境青年、低成本空间与场景",
+      "caution": "草案和正式稿关系待核验，低成本不等于全部免租",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    },
+    {
+      "id": "wenzhou",
+      "province": "浙江",
+      "region": "温州",
+      "strategy": "待核实",
+      "business_tags": [
+        "AI开发",
+        "专业服务"
+      ],
+      "source_pages": [
+        21,
+        69,
+        72
+      ],
+      "policy_search_clue": "打造OPC创业高地若干举措",
+      "report_date_text": "2026-03",
+      "mechanism": "政策维度与首席法务经理服务",
+      "caution": "服务内容与提供方待确认",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    },
+    {
+      "id": "taizhou",
+      "province": "浙江",
+      "region": "台州",
+      "strategy": "供应链赋能",
+      "business_tags": [
+        "工业质检",
+        "智能排产",
+        "制造服务"
+      ],
+      "source_pages": [
+        34,
+        69,
+        72
+      ],
+      "policy_search_clue": "人工智能OPC创新发展若干举措",
+      "report_date_text": "2026-03",
+      "mechanism": "制造业需求匹配",
+      "caution": "需求清单是线索，采购主体、预算、数据与验收待核实",
+      "official_url": null,
+      "current_status": "unverified",
+      "verified_at": null,
+      "historical_amount_clues": []
+    }
+  ]
+}

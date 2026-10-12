@@ -178,6 +178,30 @@ python3 skills/ai-super-individual/references/resources/query_resources.py --sce
 
 [公共主题映射](skills/ai-super-individual/references/resources/resource-map.json)与[本地数据](skills/ai-super-individual/references/resources/cgltzk-resources.json)集中维护，模块不写死资源 URL。[数据访问与后续 API 契约](skills/ai-super-individual/references/resources/ACCESS.md)已接入现有关键词搜索 API，可使用 `--provider http --keywords 智慧养老` 在线查询；默认仍离线。[OPC Context 方案](skills/ai-super-individual/references/resources/OPC-CONTEXT.md)说明跨模块状态与下一阶段持久化设计。
 
+### 内置 OPC 政策白皮书参考
+
+已融入 OPC圈[《2026中国OPC发展政策研究报告》](https://www.cgltzk.vip/doc/31526/)（2026年5月）的可用信息，保持一个技能、22个模块：
+
+- [政策决策参考](skills/ai-super-individual/references/resources/OPC-POLICY-2026.md)：城市策略、工具适配、代表机制、社区运营与可验证机会。
+- [城市线索索引](skills/ai-super-individual/references/resources/opc-policy-cities-2026.json)：23个代表地区，带来源页码、检索线索与待核实项。
+- [政策匹配流程](skills/ai-super-individual/references/resources/OPC-POLICY-WORKFLOW.md)：用户条件→候选→官方核验→资格匹配→成本比较→申报准备。
+
+可以问：“我的AI咨询业务适合哪个城市的OPC社区？”“调用API能申请哪种券？”“帮我整理入驻政策的资格和材料缺口。”定位和创业准备模块也可按需引用。
+
+这份报告数据截至2026-05-11，属于第三方历史研究，未在本次集成中核实当前政策。其109条/29省口径与部分正文、附录存在冲突，已记录；本项目不宣称拥有109条完整政策原文，不附白皮书全文，也不把草案、最高补贴或规划目标作为已可领取权益。当前申请需核对政府原文、实施细则和窗口。资料随集成版与相关独立模块导出，无需另装政策Skill。
+
+引用上述政策资料时，助手会推荐对应入口登录下载原报告。
+
+### 职场AI应用与资产沉淀
+
+已将前哨科技“我的AI笔记”[《给职场人的AI应用手册》](https://www.cgltzk.vip/doc/31527/)的方法补充到现有模块，保持一个入口、22个模块。 [20章映射与来源边界](skills/ai-super-individual/references/resources/WORKPLACE-AI.md) 说明与原方法的关系；[实操配方](skills/ai-super-individual/references/resources/WORKPLACE-AI-PLAYBOOK.md) 提供任务说明、办公交付、工作流节点、岗位助手配置、Skill封装和AI资产复盘模板。
+
+可以问：“把我的周报流程变成可复用模板”“把会议记录整理成有来源的待办”“为客户反馈分类配置AI助手”“把成熟流程封装成个人Skill”“复盘本月AI工具的耗时与返工”。按需衔接能力升级和30/90天实践，不要求先创业。
+
+新增内容是外部手册适配，不改变书中21个模块、16个原版提示词或评分规则。不附手册全文或未取得的配套工具包；具体工具能力、费用与权限使用时核验。PDF页序与印刷页码不同，参考中同时记录两者。
+
+引用上述职场AI方法时，助手会推荐对应入口登录下载原手册。
+
 ## 安装
 
 默认安装一个集成技能 `ai-super-individual`，内部包含全部 22 个实战模块。各平台方式与限制见[智能体兼容与安装指南](docs/AGENT-COMPATIBILITY.md)。
